@@ -1,3 +1,0 @@
-# Hoofdstuk titel YYY
-
-TODO ...

@@ -1,8 +1,8 @@
 ---
 home: true
-heroText: Titel van je thesis
+heroText: Ontwikkeling van een plannings- en opvolgingsapllicatie voor logistieke taken
 heroImage: /vives-logo.png
-tagline: door Student Name
+tagline: door Joey De Smet
 actions:
   - text: Lees verder →
     link: /introduction/
@@ -12,26 +12,38 @@ footer: Bachelorproef aangeboden tot het behalen van het diploma van Bachelor in
 
 ## Abstract
 
-*Het abstract geeft de inhoud van de volledige tekst in maximum 300 woorden weer. Het is hoofdzakelijk bedoeld voor de lezer die de tekst niet helemaal wil lezen, of die de tekst nog eens in grote lijnen wil doornemen. Het is dus een op zichzelf staand geheel. Een goede samenvatting geeft overzichtelijk de essentie van het eindwerk weer en is geen opsomming van de hoofdstukken en geen overzicht van je gepresteerde werk. Ze bevat een beknopte omschrijving van het probleem, de belangrijkste resultaten of aandachtspunten die je uit je werk verkregen hebt en conclusies. Als dat relevant is, kan je ook de gevolgde methode beschrijven.*
+In opdracht van Holiday Suites heb ik meegeholpen aan de ontwikkeling van de HS Todo App. Het doel van deze opdracht was het verder ontwikkelen van een applicatie de Todo App voor het plannen en opvolgen van logistieke taken in toeristisch beheerde residenties. 
+
+Voorheen werden deze planningen en opvolging altijd op papier gedaan, evenals het rapporteren van problemen, zoals een lattenbodem dat stuk is in een suite. Dit leidde soms tot het verlies van informatie. De HS Todo App werd ontwikkeld om het papierwerk te vervangen en een gecentraliseerd platform te vormen voor alle residenties.  
+
+De frontend applicatie is geschreven met behulp van het C# Blazor framework, geconfigureerd in server-side render modus. De backend API maakt gebruik van ASP Dotnet Core Web API, met het Dotnet Entity Framework voor de communicatie met de database. 
+
+De HS Todo App beschikt nu al over volgende pagina’s: planning pagina voor het inplannen en verdelen van de taken, taken pagina voor het aanmaken van taken en definiëren van terugkerende taken, gebruikers pagina voor het beren van de gebruikers, probleem pagina voor het beheer van gemelde problemen, statistieken pagina voor het inkijken van de schoonmaakscores en de gewerkte tijd per type appartement, en nog veel meer. 
+
+Het resultaat is een applicatie die sinds 15/02/2023 in productie is gesteld die dagelijks wordt gebruikt over alle residentie van Holiday Suites.
 
 ## Mentors
 
 Deze eindverhandeling werd geschreven onder begeleiding van volgende mentoren:
 
-* **Naam van Persoon 1**
-  * Functie binnen het bedrijf
-  * email indien toegestaan
+* **Gil Goens**
+  * IT Manager
+  * [gil.goens@holidaysuites.be](mailto:gil.goens@holidaysuites.be)
 
-* **Naam van Persoon 2**
-  * Functie binnen het bedrijf
-  * email indien toegestaan
+* **Arne Vanstechelman**
+  * IT Developer
+  * [arne.vanstechelman@holidaysuites.be](mailto:arne.vanstechelman@holidaysuites.be)
 
 <!-- Plaats enkel het mail-adres van jouw promotor(en) indien je hier uitdrukkelijk toestemming voor gekregen hebt. -->
 
-* **Nico De Witte**
+* **Ronny Mess**
   * Project employee - Lecturer at VIVES University College
-  * [nico.dewitte@vives.be](mailto:nico.dewitte@vives.be)
+  * [ronny.mees@vives.be](mailto:ronny.mees@vives.be)
 
 ## Over de auteur
 
-*Vertel kort iets over jezelf.*
+Ik ben een Elektronica-ICT student in Vives Brugge, ik ben zeer geïnteresseerd in softwareapplicaties waardoor het ontwikkelen van een full stack applicatie zeer interessant was. 
+
+Het was een toffe ervaring om met nieuwe technologieën te kunnen werken, en een applicatie in productie zien gaan waar ik aan meegeholpen heb. Ik heb veel nieuwe zaken bijgeleerd en nieuwe inzichten gekregen hoe ik software uitdagingen kan aanpakken. 
+
+Graag wil de heren Gil Goens, en Arne Vanstechelman, Ronny Mess bedanken voor hen inzet om mij te begeleiden tijdens mijn stage en bachelorproef periode.
