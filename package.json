@@ -1,0 +1,31 @@
+{
+  "name": "bachelor-thesis-vuepress-template",
+  "version": "1.0.0",
+  "description": "Please place description here",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vives-elektronics-ict-bachelor-thesis/bachelor-thesis-vuepress-template.git"
+  },
+  "keywords": [
+    "VIVES",
+    "bachelor",
+    "ict",
+    "elektronics",
+    "thesis"
+  ],
+  "author": "Student Name",
+  "bugs": {
+    "url": "https://github.com/vives-elektronics-ict-bachelor-thesis/bachelor-thesis-vuepress-template/issues"
+  },
+  "homepage": "https://github.com/vives-elektronics-ict-bachelor-thesis/bachelor-thesis-vuepress-template#readme",
+  "devDependencies": {
+    "@vuepress/plugin-container": "^2.0.0-beta.59",
+    "@vuepress/plugin-register-components": "^2.0.0-beta.59",
+    "vuepress": "^2.0.0-beta.59"
+  }
+}
