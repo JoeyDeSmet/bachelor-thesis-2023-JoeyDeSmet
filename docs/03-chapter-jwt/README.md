@@ -42,9 +42,12 @@ Voor het hernieuwen van een verlopen token stuurt de client zijn token en refres
 
 Bij de vorige implementatie stond de vervaltijd van deze token zeer laag, waardoor de client telkens een nieuw token moest aanvragen. De nieuwe token aanvragen werd telkens voor iedere request gedaan. Dit kon soms voor problemen zorgen omdat Blazor Multi threaded is. Volgende situatie stelt het probleem voor dat kan optreden. 
 
-Twee threads (**T1**, **T2**) sturen tegelijk een request uit. Omdat eerst de token vernieuwd wordt kan het zijn dat **T1** al een nieuwe token heeft gekregen, maar voordat hij zijn effectieve request kan sturen heeft **T2** ondertussen al een nieuwe token aanvraagt en ontvangen.  
+<Box>
+        
+Twee threads (**T1**, **T2**) sturen tegelijk een request uit. Omdat eerst de token vernieuwd wordt kan het zijn dat **T1** al een nieuwe token heeft gekregen, maar voordat hij zijn effectieve request kan sturen heeft **T2** ondertussen al een nieuwe token aanvraagt en ontvangen.
 
-Dit zorgt ervoor dat **T1** een ongeldige token heeft omdat **T2** de token vernieuwd heeft. Wanneer **T1** nu zijn request wil maken zal hij een unauthorized response krijgen, waardoor hij nu heel het proces opnieuw moet doen.  
+Dit zorgt ervoor dat **T1** een ongeldige token heeft omdat **T2** de token vernieuwd heeft. Wanneer **T1** nu zijn request wil maken zal hij een unauthorized response krijgen, waardoor hij nu heel het proces opnieuw moet doen.
+</Box>
 
 Niet enkel de bovenstaande situatie was een probleem maar het telkens hernieuwen van de token voor iedere request zorgde voor een grote last op de server. 
 
