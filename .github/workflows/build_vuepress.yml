@@ -1,8 +1,8 @@
-name: Build VuePress Site
+name: Build Vuepress
 
 on:
   push:
-    branches: [ master ]
+    brancher: [main]
 
 jobs:
   build:
@@ -24,10 +24,9 @@ jobs:
       - name: Build dist
         run: npm run docs:build
 
-      - name: Copy netlify.toml
-        run: cp netlify.toml ./docs/vuepress/dist
+      - name: netlify.toml
+        run: cp netlify.toml ./docs/.vuepress/dist
 
-      # https://github.com/nwtgck/actions-netlify
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
         with:
