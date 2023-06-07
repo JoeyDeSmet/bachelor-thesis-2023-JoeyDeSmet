@@ -12,7 +12,7 @@ footer: Bachelorproef aangeboden tot het behalen van het diploma van Bachelor in
 
 ## Abstract
 
-In opdracht van Holiday Suites heb ik meegeholpen aan de ontwikkeling van de HS Todo App. Het doel van deze opdracht was het verder ontwikkelen van een applicatie de Todo App voor het plannen en opvolgen van logistieke taken in toeristisch beheerde residenties. 
+In opdracht van Holiday Suites heb ik meegeholpen aan de ontwikkeling van de HS Todo App. Het doel van deze opdracht was het verder ontwikkelen van een applicatie de Todo App, voor het plannen en opvolgen van logistieke taken in toeristisch beheerde residenties. 
 
 Voorheen werden deze planningen en opvolging altijd op papier gedaan, evenals het rapporteren van problemen, zoals een lattenbodem dat stuk is in een suite. Dit leidde soms tot het verlies van informatie. De HS Todo App werd ontwikkeld om het papierwerk te vervangen en een gecentraliseerd platform te vormen voor alle residenties.  
 
@@ -33,8 +33,6 @@ Deze eindverhandeling werd geschreven onder begeleiding van volgende mentoren:
 * **Arne Vanstechelman**
   * IT Developer
   * [arne.vanstechelman@holidaysuites.be](mailto:arne.vanstechelman@holidaysuites.be)
-
-<!-- Plaats enkel het mail-adres van jouw promotor(en) indien je hier uitdrukkelijk toestemming voor gekregen hebt. -->
 
 * **Ronny Mess**
   * Project employee - Lecturer at VIVES University College
