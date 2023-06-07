@@ -11,11 +11,13 @@ title: Technologien
 
 Blazor is een open source Single Page Application development framework, ontwikkeld door Microsoft. Blazor applicaties bestaan net zoals andere webapplicaties uit HTML, CSS en JS/WASM. In Blazor wordt er gebruik gemaakt van een `.razor`-bestand, waar een combinatie van HTML, C#-code en optionele CSS-stijlen in zitten. 
 
-Deze `.razor`-bestand fungeert al de bouwstenen van een Blazor-applicatie, waarin de structuur van de pagina wordt gedefinieerd met behulp van HTML-tags, de logica wordt geïmplementeerd met C#-code. Stijlen kunnen rechtstreeks als een HTML style tag in het bestand geplaats worden, maar als er gebruik wil gemaakt worden van CSS isolation, wordt deze in een `.razor.css`-bestand geplaats. 
+Deze `.razor`-bestand fungeert al de bouwstenen van een Blazor-applicatie, waarin de structuur van de pagina wordt gedefinieerd met behulp van HTML-tags, de logica wordt geïmplementeerd met C#-code. Stijlen kunnen rechtstreeks als een HTML style tag in het bestand geplaatst worden. De stijlen kunnen ook in een `.razor.css`-bestand geplaatst worden, wat dan de mogelijkheid brengt voor CSS isolation.
 
 ### Structuur `.razor`-bestand
 
 ```razor
+// file: Counter.razor
+
 <div> 
   <h1>Counter</h1> 
   <p>Current count: @Count</p> 
@@ -34,74 +36,95 @@ Deze `.razor`-bestand fungeert al de bouwstenen van een Blazor-applicatie, waari
   } 
 } 
 ```
+
+Bovenstaande code is een voorbeeld van `.razor`-bestand, deze code houdt bij hoe vaak een gebruiker de knop heeft geklikt. Wanneer een gebruiker deze knop klikt, wordt er event gegenereerd die de interne variable zal verhogen. Vervolgens wordt de wijziging aan de gebruiker getoond.
+
+Het bovenste gedeelte van de code bevat de vormgeving van de component, geschreven in HTML. Hierin bevinden zich een paar zaken dat Blazor specifiek zijn en niet behoren tot HTML:
+
+**@Count:**
+
+De `@Count` zal tijdens gebruik vervangen worden door de waarde van de `Count` variable gedefinieerd in de code block. In Blazor wordt er gebruik gemaakt van het @-symbool om variabelen weer te geven aan de eindgebruiker.
+
+**@onclick:**
+
+De @onclick zal de klik event binden aan een methode IncrementCount, wanneer een gebruiker deze knop klikt wordt de code in deze methode uitgevoerd. In Blazor kunnen de verschillende event gebonden worden aan methoden door gebruik te maken van een structuur: `@onEVENT`, waar EVENT dan wordt vervangen door click, input, change, ... , etc.
+
+<br>  
+
+Het onderste gedeelte, dat zich bevindt in de `@code`-block, id de plek waar alle logica van de component wordt geplaatst. Hier kunnen methoden en variabelen worden gedefinieerd. In dit voorbeeld heeft de variabele `Count` het `Parameter`-attribuut. Dit is een van de attributen die beschikbaar zijn in Blazor. Dit attribuut zorgt ervoor dat deze variable kan worden ingesteld wanneer deze component wordt gebruikt (zie code hieronder). 
+
+```razor
+<Counter Count="5" />
+```
+
+In deze code wordt de Counter component gebruikt, maar zal de initiële waarde van de Count variable op 5 gezet worden in plaats van 0.
+
 ##### Resultaat
 <Counter/>
 
-Bovenstaande code is een voorbeeld van `.razor`-bestand, dat een knop voorstelt dat wanner je er op klikt een tekst erboven gaat omhoog tellen.  
-
-Het bovenste deel is de vormgeving van de component schreven in HTML. Om variabelen weer te geven in HTML wordt het @-symbool gebruik. Om een event te capteren wordt er gebruik gemaakt van vooraf gedefinieerde keywords volgens de structuur `@onEVENT`, aan deze event kunnen dan methoden gekoppeld worden.   
-
-Het onderste deel tussen de `@code`, is waar alle logica van de component zich bevindt. Hier kunnen methoden en variabelen gedefinieerd worden. In dit voorbeeld heeft de `Count`-parameter een `Parameter`-attribuut. Dit is een van de attributen die beschikbaar zijn in Blazor. Het `Parameter`-attribuut stelt deze parameter vrij wanneer deze component gebruikt zou worden. 
-
-```razor
-<Counter Count="@MyCount" />
-
-@code {
-  private int MyCount { get; set; } = 0;
-}
-```
-
 ### Render modes
 
-Blazor kan gebruikt worden in twee verschillende render-modes met elk zijn voor- en nadelen. 
+Blazor kan gebruikt worden in twee verschillende render-modes, Blazor WASM en Blazor Server. 
 
 #### Blazor WASM
 
-Bij Blazor WebAssembly (WASM) wordt er gebruik gemaakt van WebAssambly technologie, hierbij worden alle `.razor`-bestanden voor het opzetten van de server gecompileerd naar WASM. Net zoals andere webframeworks wordt er bij een connectie alle benodigde bestanden verzonden naar de client. 
+Blazor WASM (WebAssembly) maakt gebruik van WebAssambly technologie om de webpagina's weer te geven. Voor het gebruik van WASM worden alle `.razor`-bestanden gecompileerd naar WASM, waarna alle CSS en JavaScript samen gebundeld worden. Net zoals andere webframeworks word er bij de initiële connectie alle bestanden doorgestuurd (HTML, JS, WASM, CSS, ...).
 
 <Image
   light="/img/blazor-webassembly.png"
   dark="/img/blazor-webassembly-dark.png"
 />
 
-De initiële pagina-rendering wordt door de client gedaan, omdat alles lokaal bij de client staat heeft deze directe toegang tot de DOM zie figuur hierboven. In deze modus is de client dus verantwoordelijk voor alle events en reactiviteit van de webpagina.
+De pagina-rendering wordt uitgevoerd door de client, omdat alles lokaal bij de client staat heeft deze directe toegang tot de DOM. In deze modus is de client dus verantwoordelijk voor alle events en reactiviteit van de webpagina.
 
 #### Blazor Server
 
-Bij Blazor Server worden de pagina’s en componenten pas weergegeven wanneer een client een verbinding maakt en om deze pagina vraagt. De communicatie tussen server en client verloopt via SignalR (5.1). Deze connectie vormt de interactie tussen server en de client-DOM zie figuur hieronder.
+Blazor Server maakt gebruik van SignalR technologie en server side rendering om de webpagina's weer te geven. Hierbij worden de `.razor`-bestanden gebruikt als templates voor de verschillende componenten van de pagina. Bij de initiële connectie met de server wordt er een beetje javascript doorgestuurd naar de client, waarmee de client dan een SignalR connectie kan maken met de server. Deze connectie vormt de interactie tussen de server en de client-DOM.
 
 <Image
   light="/img/blazor-server.png"
   dark="/img/blazor-server-dark.png"
 />
 
-De initiële pagina-rendering wordt uitgevoerd door de server die vervolgens de resulterende HTML naar de client zal sturen. Om interactiviteit te hebben is de client verantwoordelijk om alle events door te communiceren naar de server via de SignalR-verbinding. In deze render-mode is de server verantwoordelijk voor het behandelen van alle event, en zal de server de grootste load overnemen van de client. 
+De pagina-rendering wordt uitgevoerd door de server die vervolgens de resulterende HTML naar de client zal sturen over de SignalR connectie. Om interactiviteit te hebben is de client verantwoordelijk om alle events door te communiceren naar de server. In deze render-mode is de server verantwoordelijk voor het behandelen van alle event, en zal de server de grootste load overnemen van de client. 
 
 ### Vergelijking Blazor Server - Blazor WASM
 
 |                     |     Blazor Server                |     Blazor WASM                 |
 |---------------------|----------------------------------|---------------------------------|
-|     Download grote  |   Klein                          |   Groot1                        |
+|     Download grote  |   Klein                          |   Groot                         |
 |     Schaalbaarheid  |   Uitdagend                      |   Makkelijk                     |
 |     Serverless      |   Niet mogelijk                  |   Mogelijk                      |
 |     Offlinemode     |   Niet mogelijk                  |   Mogelijk                      |
 |     Snelheid        |   Server en netwerk afhankelijk  |   Client ressource afhankelijk  |
 
-In bovestaande table is er een vergelijking gemaakt tussen Blazor Server en Blazor WASM, met de grootste verschillen.
+In bovenstaande tabel is er een vergelijking gemaakt tussen Blazor Server en Blazor WASM, met de grootste verschillen.
 
-Blazor Server heeft vooral als voordeel dat de eindgebruiker minder resources nodig heeft om de webpagina te gebruiken. Blazor Server is dan wel moeilijker om te schalen, omdat de server ook gelimiteerde resources heeft en alle load overneemt van de clients, is er een limitatie tot de hoeveelheid connectie mogelijk zijn. De webpagina is ook afhankelijk van een internetverbinding, wanneer deze wegvalt zal de pagina niet meer reageren. 
+**Download grote**
 
-Blazor WASM laat daarentegen alles door de eindgebruiker doen. De initiële load van de pagina is hoger dan Blazor Server, omdat alle dependencies en .NET Runtime wordt verzonden naar de client. De schaalbaarheid ligt hier wel beter omdat er enkel maar bestanden moeten verzonden worden naar de client, wat ook de mogelijkheid heeft voor een serverless deployment.
+In tegenstelling tot Blazor WASM is de download grote van Blazor Server veel kleiner, dit komt omdat bij Blazor WASM alle dependencies en het .NET Runtime mee gebundeld worden in de WASM-bestand. Hierdoor zal de initiële laad tijd bij Blazor Server veel lager liggen dan bij Blazor WASM. 
+
+**Schallbaarheid en serverless**
+
+Blazor WASM is dan wel veel schaalbaarder dan Blazor Server, dit komt omdat Blazor Server voor iedere connectie RAM-geheugen gebruikt wat een limitatie kan geven tot het aantal gebruikers. Omdat Blazor WASM enkel maar bestand hoeft door te sturen, is er de mogelijkheid om deze in een serverless omgeving te plaatsen.
+
+**Offline mode**
+
+Bij het verliezen van de internet connectie zal Blazor Server niet meer reageren omdat deze afhankelijk is van de SignalR connectie met de server. Blazor WASM zal blijven werken tot op het punt dat een API-call gemaakt moet worden.
+
+**Snelheid**
+
+De snelheid van de webapplicatie zijn afhankelijk van verschillende factoren, waarbij Blazor Server vooral afhankelijk is van de snelheid van de internetverbinding hoewel de kracht van de server ook een rol kan spelen. Waarbij Blazor WASM dan volledig client-ressource afhankelijk is.
+
+<br>
 
 ## ASP.NET Core Web API
 
-ASP.NET Core is een open-source framework dat is ontworpen door Microsoft voor het bouwen van moderne, cloud-gebaseerde en internet verbonden applicaties. Het biedt ontwikkelaars de mogelijkheid om schaalbare applicaties te ontwikkelen die cross-platform beschikbaar zijn. ASP.NET Core biedt de mogelijkheid om makkelijk web APIs te ontwikkelen.  
+ASP.NET Core is een open-source framework dat is ontworpen door Microsoft voor het bouwen van moderne, cloud-gebaseerde en internet verbonden applicaties. Het biedt ontwikkelaars de mogelijkheid om makkelijk schaalbare internetverbonden applicaties zoals web APIs te ontwikkelen die cross-platform beschikbaar zijn.
 
 ### Opzetten van endpoints
 
-Bij het opzetten van een webendpoint in ASP.NET Core wordt er gebruik gemaakt van een Web Controller die de basisfunctionaliteit voor de endpoints biedt. Een Web Controller is een klasse die verantwoordelijk is voor het routeren en afhandelen van HTTP-verzoeken, en het terugsturen van HTTP-responses. 
-
-Elke controller bevat eenzelfde structuur, om een nieuwe web controller aan te maken, wordt er een nieuwe klasse aangemaakt die afgeleid is van de ControllerBase klasse. Deze klasse bevat alle nodige methoden die worden aangeroepen wanneer er een HTTP-request binnen komt. 
+Het opzetten van webendpoint maakt gebruik van de ControllerBase klasse, die de basisfunctionaliteit heeft voor het opzetten van een endpoint. Deze klasse is verantwoordelijk voor het routeren en afhandelen van HTTP-verzoeken en het terugsturen van HTTP-responses. Deze klasse moet overgeërfd worden om deze te gebruiken, wat dan methoden ter beschikking stelt voor het afhandelen van HTTP-verzoeken.
 
 ```csharp
 [ApiController]
