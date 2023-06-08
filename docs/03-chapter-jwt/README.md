@@ -11,32 +11,46 @@ De authenticatie en autorisatie in de HS Todo App gebeurt via JSON Web Tokens (J
 
 ## JWT
 
-JWT is een veilige methode om informatie te verzenden tussen client en server. JWT-tokens bestaan uit drie verschillende delen. 
+JWT is een veilige methode om informatie te verzenden tussen client en server. JWT-tokens bestaan uit drie verschillende delen, een JWT token heeft dan volgende structuur: `xxxx.yyyy.zzzzz`.
 
 ### Header
 
 De header bevat het type token het is en wat voor hash-algoritme er is gebruikt voor het ondertekenen van de token. 
 
+```json
+{
+    "alg": "HS256",
+    "typ": "JWT"
+}
+```
+
 ### Payload
 
 De payload bevat de claims die de gebruiker heeft. De claims zijn de verklaringen over de entiteit die de token gebruikt. Er zijn drie soorten claims: registered claims deze bevatten nuttige informatie zoals de issuer, audience, subject en de vervaldatum van de token. Daarnaast heb je ook de public claims dit zijn de claims die public geregistreerd3 zijn. Dan heb je private claims, dit zijn de claims die je zelf mag definiëren zonder de garantie dat andere dit correct zullen begrijpen. 
 
+```json
+{
+    "name": "jhon doe",
+    "role": "admin"
+}
+```
+
 ### Signature
 
-De signature is de methode waarmee er kan gekeken worden of het bericht niet veranderd is geweest onderweg. Deze signature wordt gemaakt door header, de payload en een secret te hashen met het opgegeven hash-algoritme. Als er gebruik gemaakt wordt van een public private key, kan er ook bekeken worden of de zender wel is wie hij zegt dat hij is. 
+De signature is de methode waarmee er kan gekeken worden of het bericht niet veranderd is geweest onderweg. Deze signature wordt gemaakt door header (Base64), de payload(Base64) en een secret te hashen met het opgegeven hash-algoritme. Als er gebruik gemaakt wordt van een public private key, kan er ook bekeken worden of de zender wel is wie hij zegt dat hij is. 
 
 ### Werking
 
-Onderstaande figuur is een visuele voorstelling te zien van het authenticatie proces met JWT. Wanneer een client wil inloggen zal hij als eerste zijn inlog gegevens doorsturen naar de server. De server zal bij het ontvangen de controleren of dit account bestaat, en wanneer dit het geval is zal hij de autorisatie claims ophalen en een JWT-token generen met deze claims. 
+De onderstaande figuur is een visuele voorstelling te zien van het authenticatie proces met JWT. Wanneer een client client wil inloggen, stuurt hij eerst zijn inloggegevens naar de server. Bij ontvangst controleert de server de geldigheid van deze gegeven, en wanneer dit het geval is zal hij de autorisatie claims ophalen en een JWT-token genereren met deze claims.
 
-Wanneer de client dan nu een request wil sturen moet hij deze token in de BearerToken header plaatsen bij iedere request dat hij maakt. De server zal dan deze token valideren en antwoorden wanneer de token geldig is. 
+Wanneer de client dan nu een request wil sturen moet hij deze token in de BearerToken header plaatsen, en bij iedere request meegeven. De server zal dan deze token valideren en enkel maar antwoorden wanneer de token geldig is. 
 
 <Image
     light="/img/Schemas/JWT.png"
     dark="/img/Schemas/JWTDark.png"
 />
 
-Voor het hernieuwen van een verlopen token stuurt de client zijn token en refresh token naar de server, die vervolgens een nieuwe token en refresh token genereerd. Op deze manier moet de client niet opnieuw aanmelden. 
+Wanneer de token niet meer geldig is zal de server een 401-response sturen, de client zal dit moeten behandelen door een nieuwe token aan te vragen. Om een nieuwe token aan te vragen moet de client zijn JWT-token en refresh-token verzenden naar de server. Vervolgens zal de server een controle uitvoeren dat bij succes een nieuwe tokens genereert en deze aan de client geeft.
 
 ## Probleem
 
