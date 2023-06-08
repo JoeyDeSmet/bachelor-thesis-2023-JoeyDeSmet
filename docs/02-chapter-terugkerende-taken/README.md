@@ -9,7 +9,7 @@ title: Ontwikkeling terugkerende taken
 
 ## Situering
 
-Voorheen beschikte de Todo App enkel over een pagina om taken manueel aan te maken, door het invullen van een formulier (Figuur 3: Create todo pagina). Dit zorgt voor extra werk voor sommige taken die periodiek voorkomen, zoals bijvoorbeeld “Dagelijkse schoonmaak van X”. Dit soort taken moeten dan ook via dit formulier gebeuren. Hiervoor moet een nieuw systeem ontwikkeld worden om dit te vereenvoudigen. 
+Voorheen beschikte de Todo App alleen over een pagina om taken manueel aan te maken, door het invullen van een formulier (zie onderstaande figuur). Dit zorgt voor extra werk voor sommige taken die periodiek voorkomen, zoals bijvoorbeeld “Dagelijkse schoonmaak van X”. Het inplannen van dit soort taken gebeurd dan ook via dit formulier. Om dit op te lossen moet een systeem ontwikkeld worden die dit zal vereenvoudigen.
 
 <Image
     light="/img/Light/CreateTodo.png"
@@ -22,7 +22,7 @@ Voorheen beschikte de Todo App enkel over een pagina om taken manueel aan te mak
 
 ### Backend implementatie
 
-Om taken automatisch periodiek in te plannen, moet er een mogelijkheid zijn om telkens een gegeven periode een taak uit te voeren. Op de huidige backend server applicatie worden er al verschillende synchronisatie periodiek uitvoert. Deze synchronisaties maken gebruik van de Hangfire2 bibliotheek. Deze bibliotheek brengt ontwikkelaars de mogelijkheid om makkelijk achtergrond taken in te plannen en uit te voeren. 
+Om taken automatisch periodiek in te plannen, moet er een mogelijkheid zijn om telkens een gegeven periode een taak uit te voeren. Op de huidige backend server applicatie worden er al verschillende synchronisatie periodiek uitvoert. Deze synchronisaties maken gebruik van de [Hangfire]() library. Deze library brengt ontwikkelaars de mogelijkheid om makkelijk achtergrond taken in te plannen en uit te voeren. 
 
 Voor het opslaan van de bundels werd een nieuwe Entity aangemaakt (TodoBundle). De TodoBundle bevat de nodige velden om een nieuwe taak aan te maken, alsook de nodige informatie om deze automatisch in te plannen. Deze informatie is al volgt: 
 
