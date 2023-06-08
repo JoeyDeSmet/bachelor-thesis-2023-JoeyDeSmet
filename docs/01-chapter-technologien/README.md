@@ -37,7 +37,7 @@ Deze `.razor`-bestand fungeert al de bouwstenen van een Blazor-applicatie, waari
 } 
 ```
 
-Bovenstaande code is een voorbeeld van `.razor`-bestand, deze code houdt bij hoe vaak een gebruiker de knop heeft geklikt. Wanneer een gebruiker deze knop klikt, wordt er event gegenereerd die de interne variable zal verhogen. Vervolgens wordt de wijziging aan de gebruiker getoond.
+Bovenstaande code is een voorbeeld van `.razor`-bestand, deze code houdt bij hoe vaak een gebruiker de knop heeft geklikt. Wanneer een gebruiker deze knop klikt, wordt er een event gegenereerd die de interne variable zal verhogen. Vervolgens wordt de wijziging aan de gebruiker getoond.
 
 Het bovenste gedeelte van de code bevat de vormgeving van de component, geschreven in HTML. Hierin bevinden zich een paar zaken dat Blazor specifiek zijn en niet behoren tot HTML:
 
@@ -47,11 +47,11 @@ De `@Count` zal tijdens gebruik vervangen worden door de waarde van de `Count` v
 
 **@onclick:**
 
-De @onclick zal de klik event binden aan een methode IncrementCount, wanneer een gebruiker deze knop klikt wordt de code in deze methode uitgevoerd. In Blazor kunnen de verschillende event gebonden worden aan methoden door gebruik te maken van een structuur: `@onEVENT`, waar EVENT dan wordt vervangen door click, input, change, ... , etc.
+De @onclick zal de klik event binden aan een methode IncrementCount, wanneer een gebruiker deze knop klikt wordt de code in deze methode uitgevoerd. In Blazor kunnen de verschillende events gebonden worden aan methoden door gebruik te maken van een structuur: `@onEVENT`, waar EVENT dan wordt vervangen door click, input, change, ... , etc.
 
 <br>  
 
-Het onderste gedeelte, dat zich bevindt in de `@code`-block, id de plek waar alle logica van de component wordt geplaatst. Hier kunnen methoden en variabelen worden gedefinieerd. In dit voorbeeld heeft de variabele `Count` het `Parameter`-attribuut. Dit is een van de attributen die beschikbaar zijn in Blazor. Dit attribuut zorgt ervoor dat deze variable kan worden ingesteld wanneer deze component wordt gebruikt (zie code hieronder). 
+Het onderste gedeelte, dat zich bevindt in de `@code`-block, is de plaats waar alle logica van de component wordt geplaatst. Hier kunnen methoden en variabelen worden gedefinieerd. In dit voorbeeld heeft de variabele `Count` het `Parameter`-attribuut. Dit is een van de attributen die beschikbaar zijn in Blazor. Dit attribuut zorgt ervoor dat deze variable kan worden ingesteld wanneer deze component wordt gebruikt (zie code hieronder). 
 
 ```razor
 <Counter Count="5" />
@@ -68,14 +68,14 @@ Blazor kan gebruikt worden in twee verschillende render-modes, Blazor WASM en Bl
 
 #### Blazor WASM
 
-Blazor WASM (WebAssembly) maakt gebruik van WebAssambly technologie om de webpagina's weer te geven. Voor het gebruik van WASM worden alle `.razor`-bestanden gecompileerd naar WASM, waarna alle CSS en JavaScript samen gebundeld worden. Net zoals andere webframeworks word er bij de initiële connectie alle bestanden doorgestuurd (HTML, JS, WASM, CSS, ...).
+Blazor WASM (WebAssembly) maakt gebruik van WebAssambly technologie om de webpagina's weer te geven. Voor het opzetten compileert Blazor WASM alle `.razor`-bestanden naar een `WASM`-bestand en bundelt vervolgens alle CSS en Javascript. Net zoals andere webframeworks stuurt het bij de initiële verbinding met de client alle bestanden door (HTML, JS/WASM, CSS).
 
 <Image
   light="/img/blazor-webassembly.png"
   dark="/img/blazor-webassembly-dark.png"
 />
 
-De pagina-rendering wordt uitgevoerd door de client, omdat alles lokaal bij de client staat heeft deze directe toegang tot de DOM. In deze modus is de client dus verantwoordelijk voor alle events en reactiviteit van de webpagina.
+Bij Blazor WASM voert de client de pagina-rendering uit, omdat alle bestanden lokaal bij de client wordt uitgevoerd heeft deze een directe toegang tot de DOM. In Blazor WASM is de client dus verantwoordelijk voor alle events en reactiviteit van de webpagina.
 
 #### Blazor Server
 
@@ -114,7 +114,7 @@ Bij het verliezen van de internet connectie zal Blazor Server niet meer reageren
 
 **Snelheid**
 
-De snelheid van de webapplicatie zijn afhankelijk van verschillende factoren, waarbij Blazor Server vooral afhankelijk is van de snelheid van de internetverbinding hoewel de kracht van de server ook een rol kan spelen. Waarbij Blazor WASM dan volledig client-ressource afhankelijk is.
+De snelheid van de webapplicatie is afhankelijk van verschillende factoren, waarbij Blazor Server vooral afhankelijk is van de snelheid van de internetverbinding hoewel de kracht van de server ook een rol kan spelen. Waarbij Blazor WASM dan volledig client-ressource afhankelijk is.
 
 <br>
 
@@ -143,7 +143,7 @@ public class SampleController : ControllerBase
 }
 ```
 
-n de bovenstaande code is een controller genaamd `SampleController` gedefinieerd met enkele attributen. Het `ApiController`-attribuut geeft aan dat deze klasse als een Web API-controller fungeert. Daarnaast is er ook een route gedefinieerd met het `Route`-attribuut, waarmee wordt bepaald wat de hoofdroute van deze controller zal zijn. In dit voorbeeld zal dit de `http://your-domain.be/sample`-route zijn.  
+In bovenstaande code is een controller genaamd `SampleController` gedefinieerd met enkele attributen. Het `ApiController`-attribuut geeft aan dat deze klasse als een Web API-controller fungeert. Daarnaast is er ook een route gedefinieerd met het `Route`-attribuut, waarmee wordt bepaald wat de hoofdroute van deze controller zal zijn. In dit voorbeeld zal dit de `http://your-domain.be/sample`-route zijn.  
 
 Binnen deze klasse wordt er een `Get`-methode gedefinieerd, met behulp van het `HttpGet`-attribuut wordt deze methode toegewezen aan een HTTP GET-verzoek met een optionele id parameter. Deze methode is dan beschikbaar via de `http://your-domail.be/sample/1`-route. 
 
@@ -153,11 +153,11 @@ Door het gebruik te maken van deze controller zijn we in staat om makkelijk endp
 
 ## .NET Entity Framework
 
-Het Dotnet Entity Framework is een open source ORM (Object-Relational Mapper) dat de interactie tussen de applicatie en de database beheert en vereenvoudigd, waardoor het gemakkelijk wordt om gegeven op te slaan en op te halen van vanuit de database. 
+Het .NET Entity Framework is een open source ORM (Object-Relational Mapper) dat de interactie tussen de applicatie en de database beheert en vereenvoudigd, waardoor het gemakkelijk wordt om gegeven op te slaan en op te halen vanuit de database. 
 
 ### Werking
 
-Dotnet EF kan gebruikt worden volgens een code-first databaseontwerp, waarbij alle data eerst wordt voorgesteld als een model (C# klasse). Na het ontwerpen van een model, zal EF de SQL-query’s produceren en deze naar de database schrijven. 
+.NET EF kan gebruikt worden volgens een code-first databaseontwerp, waarbij alle data eerst wordt voorgesteld als een model (C# klasse). Na het ontwerpen van een model, zal EF de SQL-query’s produceren en deze naar de database schrijven. 
 
 ```csharp
 public class User 
@@ -178,9 +178,9 @@ public class User
 
 In bovenstaande code is een Entity genaamd `User` gedefinieerd. Deze klasse zal door Entity Framework gebruikt worden om een database tabel aan te maken genaamd “User”. De `User`-klasse bevat de volgende eigenschappen: 
 
-- Id: Dit is de unieke sleutel die zal gebruikt worden in de database, deze worden gemarkeerd met het `Key`-attribuut 
-- `Naam`: Dit is de naam van de gebruiker 
-- PetId: Dit is een optionele eigenschap wanneer een gebruiker gelinkt is aan een Huisdier zal de Id ingevuld worden 
-- Pet: Deze eigenschap zal gebruikt worden wanneer er in code dit opgevraagd wordt, dit zal niet opgeslagen worden als een kolom in de database. Het `ForeignKey`-attribuut legt de link tussen de User en een Pet. 
+- **Id**: Dit is de unieke sleutel die zal gebruikt worden in de database, deze worden gemarkeerd met het `Key`-attribuut 
+- **Naam**: Dit is de naam van de gebruiker 
+- **PetId**: Dit is een optionele eigenschap die wordt gebruikt wanneer een gebruiker gekoppeld is aan een huisdier. Het identificatie nummer zal hierin terecht komen.
+- **Pet**: Deze eigenschap wordt gebruikt wanneer er in code een verwijzing hierna to gebracht is. Deze eigenschap zal niet opgeslagen worden in de database. Het `ForeignKey`-attribuut legt de relatie dan tussen de `User` en een `Pet` vast. 
 
-Door gebruik te maken van Dotnet Entity Framework, kan er makkelijk relaties gelegd worden tussen verschillende entities. Hierdoor wordt er tijd uitgespaard en mogelijkse vulnerabilities door het zelf schrijven van SQL-query’s vermeden. 
+Door gebruik te maken van .NET Entity Framework, kan het leggen van relaties tussen verschillende entities makkelijk gebeuren. Ook zal het tijd uitsparen dankzij automatische generatie van SQL-queries en mogelijke SQL-injections vermijden.
