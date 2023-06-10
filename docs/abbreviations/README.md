@@ -4,7 +4,7 @@ Onderstaande tabel geeft een alfabetische lijst terug met alle afkortingen die i
 
 | Afkorting  | Volledige vorm                     |
 |------------|------------------------------------|
-|       API  |     Application Program Interface  |
+|     API    |   Application Program Interface    |
 |     CRUD   |   Create Read Update Delete        |
 |     CSS    |   Cascading Style Sheet            |
 |     DOM    |   Document Object Model            |

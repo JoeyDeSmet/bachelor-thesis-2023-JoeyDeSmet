@@ -5,8 +5,6 @@ title: Live reactiviteit met SignalR
 
 # Live reactiviteit met SignalR
 
-[[toc]]
-
 In de vorige versie van de Todo App ontbrak er de mogelijkheid voor live updates. Als er dus bijvoorbeeld een aanpassing werd gebracht aan de planning, kon het schoonmaakpersoneel dit niet direct zien. Wel was er een knop aanwezig om manueel de data opnieuw op te halen, wat niet ideaal is. Om de applicatie reactief te maken kan er gebruik gemaakt worden van SignalR.  
 
 <Image
@@ -18,7 +16,7 @@ In de vorige versie van de Todo App ontbrak er de mogelijkheid voor live updates
 
 ## SignalR
 
-SignalR is een open-source bibliotheek die ontwikkelaars in staat stelt om op een eenvoudige manier real-time functionaliteit toe te voegen aan een webapplicatie. SignalR maakt intern gebruik van WebSockets, Server-Sent Events of Long Polling, afhankelijk van wat het beste werk op de server en client. 
+SignalR is een open-source library die ontwikkelaars in staat stelt om op een eenvoudige manier real-time functionaliteit toe te voegen aan een webapplicatie. SignalR maakt intern gebruik van WebSockets, Server-Sent Events of Long Polling, afhankelijk van wat het beste werk op de server en client. 
 
 ### Hubs
 
@@ -26,7 +24,7 @@ SignalR maakt gebruikt van Hubs als abstractie laag tussen de client en de serve
 
 #### Groepen
 
-SignalR Hubs bieden oom de mogelijkheid om groepen van connecties te maken. Een groep is dan een verzameling van verschillende client connecties, die geassocieerd zijn met een specifieke naam. Dit stelt je in staat om een signaal naar iedere connectie binnen deze groep te sturen op basis van deze naam. 
+SignalR Hubs bieden ook de mogelijkheid om groepen van connecties te maken. Een groep is dan een verzameling van verschillende client connecties, die geassocieerd zijn met een specifieke naam. Dit stelt je in staat om een signaal naar iedere connectie binnen deze groep te sturen op basis van deze naam. 
 
 ## Implementatie
 
@@ -37,11 +35,11 @@ Door het gebruik te maken van verschillende SignalR Hubs kon ik reactiviteit toe
     dark="/img/Schemas/SignalRDark.png"
 />
 
-Op bevenstaande figuur is een visuele voorstelling te zien hoe de reactiviteit is geïmplementeerd opgesplitst in twee fases. 
+Op bovenstaande figuur is een visuele voorstelling te zien hoe de reactiviteit is geïmplementeerd opgesplitst in twee fases. 
 
 ### Fase 1: Initialisatie
 
-Wanneer een client een pagina opvraagt van de server (1) en deze is gerelateerd aan de taken. Zal deze pagina na tijdens zijn initialisatie een connectie maken met de gerelateerde Hub (2). Wanneer deze connectie succesvol verlopen is zal de client zichzelf aan de juiste groepen toevoegen. Dit gebeurt aan de hand van de residenties gerelateerd aan het account. 
+Wanneer een client een pagina opvraagt van de server (1) en deze is gerelateerd aan de taken, zal er tijdens de initialisatie een SignalR connectie tot stand gebracht worden met de gerelateerde Hub(2). Wanneer deze connectie succesvol tot stand is gekomen zal de client zichzelf aan de juiste groepen toevoegen. Dit gebeurt aan de hand van de residenties gerelateerd aan het account. 
 
 ### Fase 2: Update
 

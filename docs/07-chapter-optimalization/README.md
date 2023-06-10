@@ -1,8 +1,8 @@
 ---
 lang: nl-BE
-title: Optimalizatie
+title: Optimalisatie
 ---
 
 # Compressie, Caching, en Pagination
 
-[[toc]]
+

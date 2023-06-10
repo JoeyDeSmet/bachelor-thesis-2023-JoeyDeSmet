@@ -5,7 +5,7 @@ title: Ontwikkeling terugkerende taken
 
 # Ontwikkeling terugkerende taken
 
-[[toc]]
+
 
 ## Situering
 

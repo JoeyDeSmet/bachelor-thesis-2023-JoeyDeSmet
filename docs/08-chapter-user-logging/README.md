@@ -5,8 +5,6 @@ title: User logging
 
 # User logging
 
-[[toc]]
-
 Soms komt het wel eens voordat er een onverwachte aanpassing is gemaakt op een taak, bijvoorbeeld een deadline die is veranderd. Het zou dan handig zijn om te weten wie deze veranderd heeft en wanneer deze veranderd is. Om dit allemaal bij te houden moet er een logging systeem ontwikkeld worden die alle relevante data bijhoudt. 
 
 ## Implementatie
@@ -51,12 +49,12 @@ Voor deze pagina heb ik besloten om eens een mobile first design te hanteren. Di
 />
 
 <Image
-    light="/img/Light/LastActionsMobile.png"
-    dark="/img/Dark/LastActionsMobileDark.png"
+    light="/img/Light/LastActionsMobileCollapsed.png"
+    dark="/img/Dark/LastActionMobileCollapsedDark.png"
 />
 </GridContainer>
 
-Bovenstaande figuuren zijn de huidige mobile weergave van deze pagina. Deze pagina beschikt over enkele filters: 
+Bovenstaande figuren zijn de huidige mobile weergave van deze pagina. Deze pagina beschikt over enkele filters: 
 
 - Een datum waarmee logs van een specifieke dag kan opgehaald worden 
 - Een type waarmee gefilterd kan worden op 
@@ -65,7 +63,7 @@ Bovenstaande figuuren zijn de huidige mobile weergave van deze pagina. Deze pagi
     - Aanpassingen van taak, probleem, etc. 
 - Door wie het uitgevoerd is geweest 
 
-Ook is er een manier aanwezig om op kernwoorden te gaan zoeken in de logs. Deze kenwoorden zal gaan zoeken in de verandering velden, zie kader met `CountTowardStatistics...`, en deze woorden matchen en naar de eerste match scrollen. Wanneer er dan nog eens op enter wordt geduwd zal er naar het naar de volgende match scrollen.  
+Ook is er een manier aanwezig om op kernwoorden te gaan zoeken in de logs. Deze kernwoorden zal gaan zoeken in de verandering velden, zie kader met `CountTowardStatistics...`, en deze woorden matchen en naar de eerste match scrollen. Wanneer er dan nog eens op enter wordt geduwd zal er naar het naar de volgende match scrollen.  
 
 <Image
     light="/img/Light/LastActions.png"

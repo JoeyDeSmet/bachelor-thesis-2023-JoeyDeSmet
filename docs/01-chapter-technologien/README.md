@@ -1,11 +1,11 @@
 ---
 lang: nl-BE
-title: Technologien
+title: Technologieën
 ---
 
-# Technoloieën
+# Technologieën
 
-[[toc]]
+
 
 ## Blazor
 

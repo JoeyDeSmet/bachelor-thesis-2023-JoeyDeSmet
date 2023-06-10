@@ -5,7 +5,7 @@ title: Inleiding
 
 # Inleiding
 
-[[toc]]
+
 
 ## Holiday Suites
 

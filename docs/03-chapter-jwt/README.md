@@ -5,7 +5,7 @@ title: Herwerking frontend API-calls met JWT
 
 # Herwerking frontend API-calls met JWT
 
-[[toc]]
+
 
 De authenticatie en autorisatie in de HS Todo App gebeurt via JSON Web Tokens (JWT).
 
@@ -73,7 +73,7 @@ Ten tweede heb ik een oplossing gevonden voor het voorgaand threading probleem, 
 
 ### HS Authenticated Client
 
-Op onderstaande figuut is een diagram te zien die de werking van deze Http Client voorstelt. Opgesplitst in twee fases. 
+Op onderstaande figuur is een diagram te zien die de werking van deze Http Client voorstelt. Opgesplitst in twee fases. 
 
 <Image
     light="/img/Schemas/AuthClientExplained.png"
@@ -82,10 +82,10 @@ Op onderstaande figuut is een diagram te zien die de werking van deze Http Clien
 
 #### Fase 1 JWT-Token vervalt
 
-De client maakt gebruik van de webbrowser localstorage voor het opslaan van de JWT-token en de refresh token. Als eerst zullen beide clients voor het sturen van een request naar de server, de JWT-token ophalen uit local storage (1). Deze token zal dan automatisch in de header van de request geplaats worden. Wanneer de token verlopen is zal de server een response geven met als status code 401 Unauthorized (2). Dit zorgt ervoor dat de clients naar Fase 2 zullen gaan. 
+De client maakt gebruik van de webbrowser localstorage voor het opslaan van de JWT-token en de refresh token. Als eerst zullen beide clients voor het sturen van een request naar de server, de JWT-token ophalen uit local storage (1). Deze token zal dan automatisch in de header van de request geplaatst worden. Wanneer de token verlopen is zal de server een response geven met als status code 401 Unauthorized (2). Dit zorgt ervoor dat de clients naar Fase 2 zullen gaan. 
 
 #### Fase 2 Hernieuwing van JWT-Token
 
 Wanneer de clients zich in fase 2 bevinden zullen ze een request sturen om een sub-proces te starten die deze token zal hernieuwen. Enerzijds wanneer het proces nog niet gestart is zal dit proces gestart worden (1), en zal de client wachten tot het proces ten einde is. Anderzijds wanneer dit proces al gestart is (2), zal de client gewoon wachten tot het proces klaar is. 
 
-In dit proces (3) wordt er een refresh request naar de server gestuurd, die dan een nieuwe token genereerd en terugstuurt. Dit proces zal bij mislukking nog twee keer opnieuw proberen voor het geval dat er een netwerkprobleem was. Als laatste zal dit proces de nieuwe token naar local storage schrijven (4) en de clients verwittigen dat ze mogen verder gaan. 
+In dit proces (3) wordt er een refresh request naar de server gestuurd, die dan een nieuwe token genereert en terugstuurt. Dit proces zal bij mislukking nog twee keer opnieuw proberen voor het geval dat er een netwerkprobleem was. Als laatste zal dit proces de nieuwe token naar local storage schrijven (4) en de clients verwittigen dat ze mogen verder gaan. 
