@@ -1,29 +1,17 @@
 # Bibliografie
 
-*In de literatuurlijst neem je alle werken op waarnaar je in het eindwerk verwijst en die je geraadpleegd hebt om je eindwerk te realiseren. Voor een correcte weergave van je bronnen, volg je de APA-normen.*
+auth0.com. (n.d.). JWT.IO - JSON Web Token Introduction. Retrieved from JSON Web Tokens - jwt.io: https://jwt.io/introduction 
 
-*Ordening van de literatuurlijst:*
-- *in de literatuurlijst sorteer je alle bronnen alfabetisch op auteur, niet per soort;*
-- *werken van dezelfde auteur worden chronologisch opgesomd;*
-- *de werken van één auteur met hetzelfde publicatiejaar worden geordend op het eerste titelwoord (met uitzondering van lidwoorden); in dat geval moet je ook aan het jaartal een letter (a, b, c…) hechten om verwarring te vermijden bij refereren in de tekst;*
-- *indien geen auteursnaam bekend is, gebruik je het eerste woord van de titel, met uitzondering van lidwoorden;*
+hangfire.io. (2023, 05 26). Hangfire - Background Jobs for .NET and .NET Core. Retrieved from Hangfire: https://www.hangfire.io/ 
 
-**Een voorbeeld:**
+Microsoft. (2022, 11 15). Overview of ASP.NET Core. Retrieved from Microsoft learn: https://learn.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-7.0 
 
-Braun, H. (2007, oktober). Internet als desktop: Webapplicaties versmelten met lokale software. c’t magazine voor computertechiek, (10), 40-44.
+Microsoft. (2023, 02 24). ASP.NET Core Blazor. Retrieved from Microsoft Learn: https://learn.microsoft.com/en-us/aspnet/core/blazor/?WT.mc_id=dotnet-35129-website&view=aspnetcore-7.0 
 
-Corrosion protection of concrete bridges (s.d.). Geraadpleegd op 5 mei 2007, op [http://www.tfhrc.gov/structur/corros/corros.htm](http://www.tfhrc.gov/structur/corros/corros.htm).
+Microsoft. (2023, 05 09). Handle errors in ASP.NET Core Blazor apps. Retrieved from Microsoft Learn: https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/handle-errors?view=aspnetcore-7.0 
 
-De Bruyne, H. (1993). Meettechnologie. In: De Jager, L., De Boosere, S. en Bouckaert, R. (Red.), Praktijkgids Milieu en Bedrijf. Milieu-impacten en oplossingen, Afval - 3/1 - 3/6. Brussel: Ced.Samsom.
+Microsoft. (n.d.). Real-time ASP.NET with SignalR | .NET. Retrieved from Microsoft: https://dotnet.microsoft.com/en-us/apps/aspnet/signalr 
 
-Hibbeler, R. (1997). Sterkteleer voor technici. Schoonhoven: Academic Service. Hoppe, K. et al. (1990). EXPRESS: an experimental interface for factual information retrieval.
+qq15725. (2023, 05 25). npm: modern-screenshot. Retrieved from npm: https://www.npmjs.com/package/modern-screenshot 
 
-In: J.-L. Vidick (Ed.), Proceedings of the 13th International Conference on Research and Development in Information Retrieval (ACM SIGIR '90) (pp. 63-81). Brussels: ACM.
-
-Peuteman, Joan (s.d). Analoge en digitale technieken. Onuitgegeven syllabus. Oostende: KHBO.
-
-Van Deventer, W. T. (1997). Milieutechnologie. Van schoonmaaktechnologie naar schone technologie (3de dr.). Alphen aan den Rijn: Samsom.
-
-**Ook een figuur dient te worden opgenomen in je APA lijst:**
-
-Wilgengebroed. (2012). The internet of things. Geraadpleegd op 10 januari 2022, van [https://www.flickr.com/photos/wilgengebroed/8249565455/](https://www.flickr.com/photos/wilgengebroed/8249565455/).
+Spasojevic, M. (. (2022, 05 22). Code Maze. Retrieved from Blazor Server vs Blazor WebAssembly, Pros and Cons: https://code-maze.com/blazor-webassembly-introduction/ 
