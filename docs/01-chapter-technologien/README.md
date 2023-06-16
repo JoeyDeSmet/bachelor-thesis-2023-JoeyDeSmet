@@ -5,8 +5,6 @@ title: Technologieën
 
 # Technologieën
 
-
-
 ## Blazor
 
 Blazor is een open source Single Page Application development framework, ontwikkeld door Microsoft. Blazor applicaties bestaan net zoals andere webapplicaties uit HTML, CSS en JS/WASM. In Blazor wordt er gebruik gemaakt van een `.razor`-bestand, waar een combinatie van HTML, C#-code en optionele CSS-stijlen in zitten. 

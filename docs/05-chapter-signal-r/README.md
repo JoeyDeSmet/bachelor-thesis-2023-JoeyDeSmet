@@ -5,7 +5,7 @@ title: Live reactiviteit met SignalR
 
 # Live reactiviteit met SignalR
 
-In de vorige versie van de Todo App ontbrak er de mogelijkheid voor live updates. Als er dus bijvoorbeeld een aanpassing werd gebracht aan de planning, kon het schoonmaakpersoneel dit niet direct zien. Wel was er een knop aanwezig om manueel de data opnieuw op te halen, wat niet ideaal is. Om de applicatie reactief te maken kan er gebruik gemaakt worden van SignalR.  
+Tot nu hadden alle pagina's enkel maar een statische inhoud. Dit had als gevolg dat er een manuele actie moest uitgevoerd worden om de inhoud van de pagina's te hernieuwen. Wanneer er dus een lastminute taak binnen kwam, kon de poetser dit niet direct zien. Om reactiviteit te brengen aan iedere pagina kan er gebruik gemaakt worden van SignalR, wat intern al door Blazor gebruikt wordt om de DOM te updaten wanneer er een nieuwe pagina word aangevraagd. 
 
 <Image
     light="/img/Light/CarryOutTasks.png"
@@ -24,18 +24,18 @@ SignalR maakt gebruikt van Hubs als abstractie laag tussen de client en de serve
 
 #### Groepen
 
-SignalR Hubs bieden ook de mogelijkheid om groepen van connecties te maken. Een groep is dan een verzameling van verschillende client connecties, die geassocieerd zijn met een specifieke naam. Dit stelt je in staat om een signaal naar iedere connectie binnen deze groep te sturen op basis van deze naam. 
+SignalR heeft de mogelijkheid om verschillende connecties samen te brengen, door gebruik te maken van Hub Groups. Een Hub Group is een collectie van signalen gebonden aan een naam. Door gebruik te maken van Hubs Groups kan nu voor iedere connectie in eenzelfde Hub Group eenzelfde functie aangeroepen worden.
 
 ## Implementatie
 
-Door het gebruik te maken van verschillende SignalR Hubs kon ik reactiviteit toevoegen aan de Todo App. Omdat alle residenties gebruik maken van dezelfde server, heb ik verschillende groepen gemaakt voor elke residentie. Deze groepen zijn onderverdeeld in één groep voor taak gerelateerde updates en één voor probleem gerelateerde updates. 
+Om reactiviteit te brengen aan de Todo App zijn verschillende Hub Groups aangemaakt voor iedere residentie. Voor iedere residentie is dan een groep gemaakt dat de taak gerelateerde updates zal doorsturen, en een waar alle probleem gerelateerde update wordt doorgestuurd.
 
 <Image
     light="/img/Schemas/SignalR.png"
     dark="/img/Schemas/SignalRDark.png"
 />
 
-Op bovenstaande figuur is een visuele voorstelling te zien hoe de reactiviteit is geïmplementeerd opgesplitst in twee fases. 
+Bovenstaande figuur stelt de twee fases voor hoe de reactiviteit geïmplementeerd is.
 
 ### Fase 1: Initialisatie
 

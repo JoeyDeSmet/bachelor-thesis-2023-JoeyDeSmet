@@ -5,26 +5,11 @@ title: Ontwikkeling statistieken
 
 # Ontwikkeling statistieken pagina
 
-
-
-Om een indicatie te kunnen krijgen van de kwaliteit van het schoonmaakpersoneel, werd er gevraagd om statistieken samen te stellen zoals weergegeven in onderstaande tabel. De statistieken zouden enkel moeten berekend worden voor de eindschoonmaak taken. 
-
-Holiday Suites heeft verschillende soorten appartementen, die groter of kleiner kunnen zijn. Om een correcte indicatie te kunnen hebben zouden de statistieken gesplitst moeten worden onder deze verschillende types. 
-
-
-|             |     General  |           |           |          |     Type 20+B0R1DB  |         |       |          |         |
-|-------------|--------------|-----------|-----------|----------|---------------------|---------|-------|----------|---------|
-|     User    |   Done       |   Failed  |   % Fail  |   Score  |   # Done            |   Time  |       |   Score  |         |
-|     Bas     |   15         |   1       |   7%      |   4      |   10                |   45    |   4   |   9.10   |   0.5   |
-|     Jan     |   3          |   0       |   0%      |   2      |   1                 |   41    |   0   |   8.40   |   -0.2  |
-|     Els     |   52         |   2       |   4%      |   2      |   11                |   39    |   -2  |   8.40   |   -0.2  |
-|     Totaal  |   70         |   3       |   4%      |   2.6    |   22                |   41    |       |   8.60   |         |
-
-De score in de tabel stelt de externe schoonmaak score voor, dit is de score die de klant na zijn verblijf kan geven. Naast de tijd en de score moet er ook nog een vergelijk gemaakt worden tussen de gemiddelde score van het type en de persoon specifieke gemiddelde. 
+Om een inzicht te krijgen omtrent de duurtijd van de schoonmaken per type appartement werd er gevraagd om statistieken samen te stellen. Hierbij moet er ook een koppeling liggen met de klantenreviews, in deze reviews kan de klant een score geven op de schoonmaak van een suite. Het doel van deze statistieken is om de ervaring van de klant te verbeteren door de schoonmaken te verbeteren. 
 
 ## Implementatie
 
-Tijdens het gebruik van de HS Todo App worden er gegevens opgeslagen in verband met de taken, volgende is een opsomming van de taak gerelateerde data dat voor iedere taak wordt bijgehouden. 
+Tijdens het gebruik van de HS Todo App worden er gegevens opgeslagen in verband met de taken. Iedere taak bevat data dat gebruikt kan worden om statistieken op te stellen zoals:
 
 - Start en Stop datum en tijd 
 - Persoon die de taak heeft gedaan 

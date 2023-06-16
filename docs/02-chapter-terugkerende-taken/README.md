@@ -5,11 +5,9 @@ title: Ontwikkeling terugkerende taken
 
 # Ontwikkeling terugkerende taken
 
-
-
 ## Situering
 
-Voorheen beschikte de Todo App alleen over een pagina om taken manueel aan te maken, door het invullen van een formulier (zie onderstaande figuur). Dit zorgt voor extra werk voor sommige taken die periodiek voorkomen, zoals bijvoorbeeld “Dagelijkse schoonmaak van X”. Het inplannen van dit soort taken gebeurd dan ook via dit formulier. Om dit op te lossen moet een systeem ontwikkeld worden die dit zal vereenvoudigen.
+Op iedere residentie zijn er taken die periodiek ingepland moeten worden, zoals bijvoorbeeld dagelijkse schoonmaak van de lift. In de vorige versie van de Todo App was er enkel een pagina om taken manueel aan te maken, door het invullen van een formulier (zie onderstaande figuur). Dit heeft als gevolg dat een personeelslid iedere dag deze taak manueel moet aanmaken. 
 
 <Image
     light="/img/Light/CreateTodo.png"
@@ -17,6 +15,8 @@ Voorheen beschikte de Todo App alleen over een pagina om taken manueel aan te ma
     dark="/img/Dark/CreateTodoDark.png"
     dark_mobile="/img/Dark/CreateTodoMobileDark.png"
 />
+
+Om het manueel inplannen van deze terugkerende taken weg te nemen, is er besloten om een systeem te ontwikkelen die deze automatisch zal inplannen.
 
 ## Implementatie
 
