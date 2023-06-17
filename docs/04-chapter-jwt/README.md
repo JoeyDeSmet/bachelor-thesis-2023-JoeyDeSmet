@@ -5,12 +5,12 @@ title: Herwerking frontend API-calls met JWT
 
 # Herwerking frontend API-calls met JWT
 
-Na het ontwikkelen van het crash report systeem, kwamen er regelmatig report binnen in verband met de authenticatie. Deze crash zorgde ervoor dat de gebruikers telkens opnieuw moesten inloggen, dit zorgde dus voor een slechtere gebruikservaring. Hierdoor is er besloten om een herwerking uit te voeren van het authenticatiesysteem.
+Na het ontwikkelen van het crash report systeem, kwamen er regelmatig reports binnen in verband met de authenticatie. Deze crash zorgde ervoor dat de gebruikers telkens opnieuw moesten inloggen, dit zorgde dus voor een slechte gebruikservaring. Hierdoor is er besloten om een herwerking uit te voeren van het authenticatiesysteem.
 
 ## Probleem
 <br>
 
-Het eerste probleem was dat de vervaltijd van de JWT token zeel laag stond, daarom was er voorheen ook besloten om voor iedere request een nieuwe token aan te vragen. Dit is als eerste niet nodig en zorgt ook voor veel requests naar de API. Het aanvragen van een nieuwe token op zich zelf zorgde soms voor problemen, omdat Blazor Multi threaded is kon een race condition voorkomen. Onderstaande situatie stel deze race condition voor.
+Het eerste probleem was dat de vervaltijd van de JWT token zeel laag stond, daarom was er voorheen ook besloten om voor iedere request een nieuwe token aan te vragen. Dit is als eerste niet nodig en zorgt ook voor veel requests naar de API. Het aanvragen van een nieuwe token op zich zelf zorgde soms voor problemen. Omdat Blazor Multi threaded is kon een race condition voorkomen. Onderstaande situatie stel deze race condition voor.
 
 <br>
 
@@ -50,9 +50,15 @@ De header bestaat meestal uit twee delen, het type token en het hash-algoritme d
 
 De payload bevat informatie over de gebruiker, deze worden gedefinieerd volgens claims. Claim zij opgesplitst in drie soorten:
 
+<br>
+
 **Registered claims**: Dit zijn de officieel geregistreerde claims dit bevat nuttige informatie zoals: de issuer, audience, subject, vervaldatum, ..., etc.
 
+<br>
+
 **Public claims**: Dit zijn de claims die publiek geregistreerd staan. Voorbeelden hiervan kunnen gevonden worden in de [IANA JSON Web Tokens Claims Registry](https://www.iana.org/assignments/jwt/jwt.xhtml#claims).
+
+<br>
 
 **Private claims**: Dit zijn de claims die je zelf mag definiëren dit dan wel zonder de garantie dat derden deze zal ondersteunen.
 
@@ -71,6 +77,8 @@ De signature is een validatie dat kan verifiëren of het bericht onderweg niet v
 
 De onderstaande figuur is een visuele voorstelling te zien van het authenticatie proces met JWT. Wanneer een client client wil inloggen, stuurt hij eerst zijn inloggegevens naar de server. Bij ontvangst controleert de server de geldigheid van deze gegeven, wanneer dit het geval is zal hij de autorisatie claims ophalen en een JWT-token genereren met deze claims.
 
+<br>
+
 Wanneer de client dan nu een request wil sturen moet hij deze token in de BearerToken header plaatsen, en bij iedere request meegeven. De server zal dan deze token valideren en enkel maar antwoorden wanneer de token geldig is. 
 
 <Image
@@ -83,6 +91,8 @@ Wanneer de token niet meer geldig is zal de server een 401-response sturen, de c
 ## Implementatie
 
 Om de token minder frequent te moeten vernieuwen, heb ik als eerst de vervaltijd van deze token verhoogd. 
+
+<br>
 
 Daarna moest de race condition opgelost worden dat hierboven vermeld is. Hiervoor heb ik een custom Http Client (HS Authenticated Client) geschreven die verantwoordelijk is voor het hernieuwen van de token.
 
@@ -103,6 +113,10 @@ Voor iedere request haalt iedere client de JWT token op uit localstorage (1), de
 
 Wanneer een client zich in Fase 2 bevind, zal de client een process aanmaken (1) die verantwoordelijk is voor de hernieuwing van de JWT-token. Wanneer dit process al gestart is wordt deze client thread geblokkeerd tot deze klaar is.
 
+<br>
+
 Dit process zal de verlopen token en refresh token ophalen uit localstorage en een refresh aanvragen bij de server (3). Bij een succesvolle hernieuwing zal dit process de nieuwe token en refresh token terug schrijven naar localstorage (4). Daarna signaleert hij alle wachtende client die terug kunnen gaan naar fase 1. 
+
+<br>
 
 Wanneer er bij de hernieuwing dan toch weer een bad response binnen komt, zal dit process dit nog 3 keer proberen voor het geval dat er een netwerk probleem zou geweest zijn.

@@ -5,11 +5,14 @@ title: User logging
 
 # User logging
 
-Soms komt het wel eens voordat er een onverwachte aanpassing is gemaakt op een taak, bijvoorbeeld een deadline die is veranderd. Het zou dan handig zijn om te weten wie deze veranderd heeft en wanneer deze veranderd is. Om dit allemaal bij te houden moet er een logging systeem ontwikkeld worden die alle relevante data bijhoudt. 
+Soms komt het wel eens voordat er een onverwachte aanpassing is gemaakt op een taak, bijvoorbeeld een deadline van een taak dat veranderd is. Het zou dan handig zijn om te weten wie deze veranderd heeft gemaakt en wanneer deze veranderd is. Om dit allemaal bij te houden moet er een logging systeem ontwikkeld worden die alle relevante data bijhoudt. 
 
 ## Implementatie
+<br>
 
-Om een logging systeem te hebben moet er voor iedere request dat verzonden wordt moet wat informatie worden opgeslagen. Om zo weinig mogelijk data te hoeven opslaan heb ik een nieuwe entity aangemaakt genaamd `UserLog`. 
+Om een goeie logging systeem te hebben moet er bij iedere request relevante data opgeslagen worden. Om deze log op te slaan heb ik als eerst een nieuwe entity aangemaakt genaamd `UserLog`.
+
+<br>
 
 Deze entity bevat de volgende informatie: 
 
@@ -26,19 +29,27 @@ Deze entity bevat de volgende informatie:
 - Type: geeft informatie over welk type verandering het gaat 
 - Changes: JSON-data die de verandering voorstelt 
 
+<br>
+
 Met deze informatie is er voldoende om een logging systeem te implementeren. 
 
 ### Backend
 
-Om alle acties bij te houden die iedere user uitgevoerd heeft heb ik een logging service gemaakt. Deze service kan dan in iedere contoller waar logging nodig is deze service injecteren.  
+Om alle acties bij te houden die iedere user uitgevoerd heeft heb ik een logging service gemaakt. Deze service kan dan in iedere contoller waar logging nodig is deze service injecteren en gebruiken.  
 
-Wanneer een client dat een request stuurt naar de API, zal deze service een UserLog object aanmaken. Deze service heeft brengt de mogelijkheid om op een generieke manier logs te maken van verschillende objecten. Door gebruik te maken van polymorfisme kan de verandering van verschillende objecten op eenzelfde manier worden gelogd. 
+<br>
 
-Daarna zal het alle essentiële data aanvullen vanuit de context waarin het zich bevindt. Als laatste zal het dit object dan naar de database schrijven en de response doorsturen naar de client. 
+Wanneer een client dan een request stuurt naar de API, zal deze service een UserLog object aanmaken. Deze service heeft de mogelijkheid om op een generieke manier logs te maken van verschillende objecten. Door gebruik te maken van polymorfisme kan de verandering van verschillende objecten op eenzelfde manier worden gelogd. Deze abstracte objecten moeten een methode bevatten om de veranderingen voor te stellen as een JSON-string. 
+
+<br>
+
+Als laatste zal de service alle essentiële data aanvullen vanuit de context waarin het zich bevindt en alle data schrijven naar de database.
 
 ### Frontend
 
-Na het implementeren van dit logsysteem, was er nog geen frontend aanwezig. Wanneer de logging nodig was werd dit via een SQL-Manager bekeken. Dus heb ik hiervoor ook nog een page aangemaakt waar deze logs te bekijken zijn.  
+Het implementeren van de backend was in een vroegere periode al gebeurd. Om deze logs dus te bekijken werd er telkens gebruik gemaakt van een SQL-manager waarbij SQL-queries gebruikt werden om deze log te raadplegen. Dit zorgde er ook voor dat deze logs enkel ter beschikking waren voor admins. Daarom is er besloten om een frontend aan te maken die deze logs kan weergeven.  
+
+<br>
 
 Voor deze pagina heb ik besloten om eens een mobile first design te hanteren. Dit wil zeggen dat ik de pagina in eerste instantie voor kleine schermen heb ontworpen, en deze daarna wat aangepast voor grotere schermen. 
 
@@ -56,6 +67,8 @@ Voor deze pagina heb ik besloten om eens een mobile first design te hanteren. Di
 
 Bovenstaande figuren zijn de huidige mobile weergave van deze pagina. Deze pagina beschikt over enkele filters: 
 
+<br>
+
 - Een datum waarmee logs van een specifieke dag kan opgehaald worden 
 - Een type waarmee gefilterd kan worden op 
     - Aanmaak van taak, probleem, etc. 
@@ -63,7 +76,9 @@ Bovenstaande figuren zijn de huidige mobile weergave van deze pagina. Deze pagin
     - Aanpassingen van taak, probleem, etc. 
 - Door wie het uitgevoerd is geweest 
 
-Ook is er een manier aanwezig om op kernwoorden te gaan zoeken in de logs. Deze kernwoorden zal gaan zoeken in de verandering velden, zie kader met `CountTowardStatistics...`, en deze woorden matchen en naar de eerste match scrollen. Wanneer er dan nog eens op enter wordt geduwd zal er naar het naar de volgende match scrollen.  
+<br>
+
+Ook is er een manier aanwezig om op kernwoorden te gaan zoeken. Wanneer er dan gezocht wordt slaat dit op de verandering velden (zie kader met `Description: from...` op bovenstaande figuur). Een process zal itereren over ieder kader en zoeken naar een match. Wanneer een match gevonden is zal de pagina naar deze log scrollen. Om meerdere matches te bekijken kan er nogmaals op enter geklikt worden om naar de volgende match te gaan.
 
 <Image
     light="/img/Light/LastActions.png"

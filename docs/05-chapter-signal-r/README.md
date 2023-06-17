@@ -15,6 +15,7 @@ Tot nu hadden alle pagina's enkel maar een statische inhoud. Dit had als gevolg 
 />
 
 ## SignalR
+<br>
 
 SignalR is een open-source library die ontwikkelaars in staat stelt om op een eenvoudige manier real-time functionaliteit toe te voegen aan een webapplicatie. SignalR maakt intern gebruik van WebSockets, Server-Sent Events of Long Polling, afhankelijk van wat het beste werk op de server en client. 
 
