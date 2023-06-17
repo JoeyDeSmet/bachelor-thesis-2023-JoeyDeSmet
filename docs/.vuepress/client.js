@@ -1,12 +1,11 @@
+import { defineClientConfig } from '@vuepress/client';
+
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify';
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 
-import "vuetify/dist/vuetify.min.css";
 import '@mdi/font/css/materialdesignicons.css'
-
-import { defineClientConfig } from '@vuepress/client';
 
 export default defineClientConfig({
     enhance: (context) => {
@@ -17,6 +16,8 @@ export default defineClientConfig({
                 dark: true,
             },
         });
+
+
 
         context.app.use(vuetify);
     }

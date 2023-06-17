@@ -1,9 +1,11 @@
 import { path } from '@vuepress/utils'
+import { viteBundler } from 'vuepress';
+import { defineUserConfig } from 'vuepress'
 import { defaultTheme } from '@vuepress/theme-default';
 import { containerPlugin } from '@vuepress/plugin-container';
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 
-module.exports = {
+export default defineUserConfig({
   lang: 'en-US',
   title: 'Ontwikkeling van een plannings- en opvolgingsapllicatie voor logistieke taken',
   description: 'Onwikkeling van de HS Todo App',
@@ -41,6 +43,14 @@ module.exports = {
     docsBranch: 'master'
   }),
 
+  bundler: viteBundler({
+    viteOptions: {
+      ssr: {
+        noExternal: ['vuetify'],
+      },
+    },
+  }),
+
   serviceWorker: true,
 
   plugins: [
@@ -56,4 +66,4 @@ module.exports = {
       componentsDir: path.resolve(__dirname, './components'),
     }),
   ],
-}
+});
