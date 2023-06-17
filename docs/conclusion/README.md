@@ -1,6 +1,15 @@
 # Conclusie
 
-Het eindresultaat is een applicatie dat een centraal platform vormt rond het beheren van de verschillende residenties van Holiday Suites. De HS Todo App zou volgende voordelen brengen aan Holiday Suites: 
+<Image
+    light="/img/HSStats.png"
+    dark="/img/HSStats.png"
+/>
+
+Het eindresultaat is een applicatie dat een centraal platform vormt rond het beheren van de verschillende residenties van Holiday Suites. Waar al 152 gebruikers op zijn geregistreerd, 23.309 taken zijn uitgevoerd en 12.045 werkuren zijn opgenomen.
+
+<br>
+
+De HS Todo App zou ook enkele voordelen moeten brengen aan Holiday Suites:
 
 <br>
 
