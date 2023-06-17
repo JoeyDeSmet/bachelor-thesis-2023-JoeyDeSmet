@@ -28,7 +28,7 @@ jobs:
         run: cp netlify.toml ./docs/.vuepress/dist
 
       - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v1.2
+        uses: nwtgck/actions-netlify@v2.0
         with:
           production-deploy: true
           publish-dir: './docs/.vuepress/dist'
