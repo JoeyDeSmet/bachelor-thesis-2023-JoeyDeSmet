@@ -5,7 +5,7 @@ title: Reflectie
 
 # Reflectie
 
-De HS Todo App is tijdens mijn periode bij Holiday Suites in productie gebracht over de verschillende residenties. Waarbij er eerst een test fase van een maand in Westende ingebracht op 15/02/2023. Daarna werd geleidelijk aan de app gelanceerd over de andere residenties: 
+De HS Todo App is tijdens mijn stage/bachelorproef periode bij Holiday Suites in productie gebracht over de verschillende residenties. Waarbij er eerst een test fase van een maand in Westende ingebracht op 15/02/2023. Daarna werd geleidelijk aan de app gelanceerd over de andere residenties: 
 - Blankenberge & De Haan: 13/03/2023 
 - Zeebrugge: 15/03/2023 
 - Jabbeke: 27/03/2023 

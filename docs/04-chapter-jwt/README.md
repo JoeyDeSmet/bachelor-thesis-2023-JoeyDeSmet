@@ -8,19 +8,30 @@ title: Herwerking frontend API-calls met JWT
 Na het ontwikkelen van het crash report systeem, kwamen er regelmatig report binnen in verband met de authenticatie. Deze crash zorgde ervoor dat de gebruikers telkens opnieuw moesten inloggen, dit zorgde dus voor een slechtere gebruikservaring. Hierdoor is er besloten om een herwerking uit te voeren van het authenticatiesysteem.
 
 ## Probleem
+<br>
 
 Het eerste probleem was dat de vervaltijd van de JWT token zeel laag stond, daarom was er voorheen ook besloten om voor iedere request een nieuwe token aan te vragen. Dit is als eerste niet nodig en zorgt ook voor veel requests naar de API. Het aanvragen van een nieuwe token op zich zelf zorgde soms voor problemen, omdat Blazor Multi threaded is kon een race condition voorkomen. Onderstaande situatie stel deze race condition voor.
 
-<Box>
+<br>
+
+<v-card variant="outlined" class="my-2">
+<v-card-item>
 
 Wanneer twee threads (**T1**, **T1**) op hetzelfde moment een request willen uitsturen kan het volgende voorkomen:
 
+<br>
+
 **T1** vraagt als eerst een nieuwe token aan en schrijft deze naar localstorage. Daarna vraagt **T2** een nieuwe token aan voor **T1** zijn effectieve request heeft gestuurd. 
 
+<br>
+
 Wanneer **T1** nu de token leest uit localstorage voor **T2** zijn nieuwe token kan schrijven naar localstorage, stuurt **T1** zijn request met een ongeldige token door. Dit zorgt er nu voor dat **T1** een unauthorized response krijgt waardoor de gebruiker wordt uitgelogd.
-</Box>
+</v-card-item>
+</v-card>
+
 
 ## JWT
+<br>
 
 JWT is een veilige methode om informatie te verzenden tussen client en server. JWT-tokens bestaan uit drie verschillende delen, een JWT token heeft dan volgende structuur: `xxxx.yyyy.zzzzz`.
 

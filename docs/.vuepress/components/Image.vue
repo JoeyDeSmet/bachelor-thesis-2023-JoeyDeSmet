@@ -38,7 +38,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="image-container">
+    <div class="image-container my-3">
         <img :src="isDark ? props.dark : props.light" alt="img" class="d-desktop">
         <img :src="isDark 
                 ? (props.dark_mobile != '' ? props.dark_mobile : props.dark) 

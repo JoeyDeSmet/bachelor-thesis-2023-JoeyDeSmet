@@ -1,11 +1,10 @@
 ---
 lang: nl-BE
 title: Inleiding
+layout: Layout
 ---
 
 # Inleiding
-
-
 
 ## Holiday Suites
 
@@ -59,3 +58,5 @@ Om dit beter te organiseren ontwikkeld Holiday Suites een in eigen huis applicat
 Het schoonmaakpersoneel zal hiervoor gebruik maken van aangeboden gsm’s die zich in een kioskmode bevinden waar de app op draait. Het personeel kan zich hierop inklokken en krijgen daarna een overzicht te zien van de taken die hen toegewezen zijn. Op dit overzicht kunnen ze taken starten, stoppen en eventueel problemen melden bij een taak. 
 
 Voor het operations en conciërge personeel wordt de app op zijn/haar computer gebruikt. Hier kunnen ze naar verschillende pagina's gaan waar ze alle nodige tools hebben om de residentie te beheren. 
+
+Deze scriptie bevat de grootste ontwikkelingen dat ik heb gebracht aan de Todo App.

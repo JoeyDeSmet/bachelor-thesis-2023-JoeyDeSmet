@@ -1,7 +1,7 @@
 {
-  "name": "bachelor-thesis-vuepress-template",
+  "name": "bachelor-thesis-ontwikkeling-planning-en-opvolgingsapplicatie",
   "version": "1.0.0",
-  "description": "Please place description here",
+  "description": "Bachelor thesis for the VIVES University of Applied Sciences and Arts, Elektronics-ICT department.",
   "main": "index.js",
   "scripts": {
     "docs:dev": "vuepress dev docs",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vives-elektronics-ict-bachelor-thesis/bachelor-thesis-vuepress-template.git"
+    "url": "git+https://github.com/vives-elektronics-ict-bachelor-thesis/bachelor-thesis-2023-JoeyDeSmet.git"
   },
   "keywords": [
     "VIVES",
@@ -18,14 +18,19 @@
     "elektronics",
     "thesis"
   ],
-  "author": "Student Name",
+  "author": "Joey De Smet",
   "bugs": {
-    "url": "https://github.com/vives-elektronics-ict-bachelor-thesis/bachelor-thesis-vuepress-template/issues"
+    "url": "https://github.com/vives-elektronics-ict-bachelor-thesis/bachelor-thesis-2023-JoeyDeSmet/issues"
   },
-  "homepage": "https://github.com/vives-elektronics-ict-bachelor-thesis/bachelor-thesis-vuepress-template#readme",
+  "homepage": "https://github.com/vives-elektronics-ict-bachelor-thesis/bachelor-thesis-2023-JoeyDeSmet",
   "devDependencies": {
     "@vuepress/plugin-container": "^2.0.0-beta.59",
     "@vuepress/plugin-register-components": "^2.0.0-beta.59",
     "vuepress": "^2.0.0-beta.59"
+  },
+  "dependencies": {
+    "@mdi/font": "^7.2.96",
+    "material-icons": "^1.13.8",
+    "vuetify": "^3.3.3"
   }
 }

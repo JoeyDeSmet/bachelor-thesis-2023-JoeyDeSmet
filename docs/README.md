@@ -11,6 +11,7 @@ footer: Bachelorproef aangeboden tot het behalen van het diploma van Bachelor in
 ---
 
 ## Abstract
+<br>
 
 In opdracht van Holiday Suites heb ik meegeholpen aan de ontwikkeling van de HS Todo App. Het doel van deze opdracht was het verder ontwikkelen van een applicatie de Todo App, voor het plannen en opvolgen van logistieke taken in toeristisch beheerde residenties. 
 
@@ -23,6 +24,7 @@ De HS Todo App beschikt nu al over volgende pagina’s: planning pagina voor het
 Het resultaat is een applicatie die sinds 15/02/2023 in productie is gesteld die dagelijks wordt gebruikt over alle residentie van Holiday Suites.
 
 ## Mentors
+<br>
 
 Deze eindverhandeling werd geschreven onder begeleiding van volgende mentoren:
 
@@ -40,8 +42,17 @@ Deze eindverhandeling werd geschreven onder begeleiding van volgende mentoren:
 
 ## Over de auteur
 
+<br>
+
 Ik ben een Elektronica-ICT student in Vives Brugge, ik ben zeer geïnteresseerd in softwareapplicaties waardoor het ontwikkelen van een full stack applicatie zeer interessant was. 
 
 Het was een toffe ervaring om met nieuwe technologieën te kunnen werken, en een applicatie in productie zien gaan waar ik aan meegeholpen heb. Ik heb veel nieuwe zaken bijgeleerd en nieuwe inzichten gekregen hoe ik software uitdagingen kan aanpakken. 
 
 Graag wil de heren Gil Goens, en Arne Vanstechelman, Ronny Mess bedanken voor hen inzet om mij te begeleiden tijdens mijn stage en bachelorproef periode.
+
+<br/>
+<br/>
+
+<TimeLine/>
+
+<br/>
