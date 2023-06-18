@@ -13,7 +13,7 @@ Na het ontwikkelen van het crash report systeem, kwamen er regelmatig reports bi
 ## Probleem
 <br>
 
-Het eerste probleem was dat de vervaltijd van de JWT token zeel laag stond, daarom was er voorheen ook besloten om voor iedere request een nieuwe token aan te vragen. Dit is als eerste niet nodig en zorgt ook voor veel requests naar de API. Het aanvragen van een nieuwe token op zich zelf zorgde soms voor problemen. Omdat Blazor Multi threaded is kon een race condition voorkomen. Onderstaande situatie stel deze race condition voor.
+Het eerste probleem was dat de vervaltijd van de JWT token zeer laag stond, daarom was er voorheen ook besloten om voor iedere request een nieuwe token aan te vragen. Dit is als eerste niet nodig en zorgt ook voor veel requests naar de API. Het aanvragen van een nieuwe token op zich zelf zorgde soms voor problemen. Omdat Blazor Multi threaded is kon een race condition voorkomen. Onderstaande situatie stel deze race condition voor.
 
 <br>
 
@@ -55,7 +55,7 @@ De payload bevat informatie over de gebruiker, deze worden gedefinieerd volgens 
 
 <br>
 
-**Registered claims**: Dit zijn de officieel geregistreerde claims dit bevat nuttige informatie zoals: de issuer, audience, subject, vervaldatum, ..., etc.
+**Registered claims**: Dit zijn de officieel geregistreerde claims die nuttige informatie bevatten zoals: de issuer, audience, subject, vervaldatum, ..., etc.
 
 <br>
 
