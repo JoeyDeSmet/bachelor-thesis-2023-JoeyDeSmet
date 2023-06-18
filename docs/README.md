@@ -52,11 +52,11 @@ Deze eindverhandeling werd geschreven onder begeleiding van volgende mentoren:
 
 <br>
 
-Ik ben een Elektronica-ICT student in Vives Brugge, ik ben zeer geïnteresseerd in softwareapplicaties waardoor het ontwikkelen van een full stack applicatie zeer interessant was. 
+Ik ben De Smet Joey een Elektronica-ICT student in Vives Brugge, ik ben zeer geïnteresseerd in softwareapplicaties waardoor het ontwikkelen van een full stack applicatie zeer interessant was. 
 
 Het was een toffe ervaring om met nieuwe technologieën te kunnen werken, en een applicatie in productie zien gaan waar ik aan meegeholpen heb. Ik heb veel nieuwe zaken bijgeleerd en nieuwe inzichten gekregen hoe ik software uitdagingen kan aanpakken. 
 
-Graag wil de heren Gil Goens, en Arne Vanstechelman, Ronny Mess bedanken voor hen inzet om mij te begeleiden tijdens mijn stage en bachelorproef periode.
+Graag wil ik de heren Gil Goens, en Arne Vanstechelman, Ronny Mess bedanken voor hun inzet om mij te begeleiden tijdens mijn stage en bachelorproef periode.
 
 <br/>
 <br/>
