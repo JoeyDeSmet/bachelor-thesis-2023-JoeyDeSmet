@@ -1,4 +1,4 @@
-# Thesis Ontwikkeling van een plannings- en opvolgingsapllicatie voor logistieke taken
+# Thesis Ontwikkeling van een plannings- en opvolgingsapplicatie voor logistieke taken
 
 [![Build Vuepress](https://github.com/vives-elektronics-ict-bachelor-thesis/bachelor-thesis-2023-JoeyDeSmet/actions/workflows/build_vuepress.yml/badge.svg)](https://github.com/vives-elektronics-ict-bachelor-thesis/bachelor-thesis-2023-JoeyDeSmet/actions/workflows/build_vuepress.yml) [![Netlify Status](https://api.netlify.com/api/v1/badges/47aa0523-eab7-4b3b-9f81-9928e0ac3845/deploy-status)](https://app.netlify.com/sites/bachelor-thesis-2023-joey-de-smet/deploys)
 
