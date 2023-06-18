@@ -53,7 +53,7 @@ Monnikenwerve 17-19, 8000 – Brugge BE 08 34.230.286
 ## HS Todo App
 <br>
 
-Holiday Suites heeft zeven residenties over België, waar verschillende taken uitgevoerd moet worden door het schoonmaaks- en conciërge personeel. Voorheen werd de planning en het melden van problem volledig op papier gedaan. Hierdoor moest er mondelings doorgegeven worden wanneer de planning veranderd.
+Holiday Suites heeft zeven residenties over België, waar verschillende taken uitgevoerd moet worden door het schoonmaaks- en conciërge personeel. Voorheen werd de planning en het melden van problemen volledig op papier gedaan. Hierdoor moest er mondeling doorgegeven worden wanneer de planning veranderd.
 
 <br>
 
