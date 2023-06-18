@@ -5,9 +5,12 @@ title: Ontwikkeling statistieken
 
 # Ontwikkeling statistieken pagina
 
+## Situering
+<br>
+
 Om een inzicht te krijgen omtrent de duurtijd van de schoonmaken per type appartement werd er gevraagd om statistieken samen te stellen. Hierbij moet er ook een koppeling liggen met de klantenreviews, in deze reviews kan de klant een score geven op de schoonmaak van een suite. Het doel van deze statistieken is om de ervaring van de klant te verbeteren door de schoonmaken te verbeteren. 
 
-## Implementatie
+## Backend implementatie
 <br>
 
 Tijdens het gebruik van de HS Todo App worden er gegevens opgeslagen in verband met de taken. Iedere taak bevat data dat gebruikt kan worden om statistieken op te stellen zoals:
@@ -24,7 +27,7 @@ Tijdens het gebruik van de HS Todo App worden er gegevens opgeslagen in verband 
 
 Omdat de externe score van een klant komt kan het soms zijn dat deze niet echt correct is. Daarom is er nog een indicatie toegevoegd die zegt of een taak zal meetellen bij de statistieken of niet. De externe score wordt ook niet via de Todo App gegeven maar komt uit het boeking programma Booking Experts. Voor deze review data op te halen werd er een synchronisatie taak aangemaakt, die periodiek de reviews zal ophalen. 
 
-### Backend
+<br>
 
 Om de statistieken te berekenen is er in de backend een StatisticsService aangemaakt. Deze service is verantwoordelijk voor het genereren van de statistieken. Voor het genereren van de statistieken zal deze service ten eerste alle voltooide schoonmaaktaken ophalen en vervolgens de gemiddelden berekenen. Ten tweede zal hij deze taken groeperen op persoon, en daarvan de gemiddelden berekenen. 
 
@@ -32,7 +35,8 @@ Om de statistieken te berekenen is er in de backend een StatisticsService aangem
 
 Om de data beschikbaar te stellen werd er nog een endpoint geschreven, waarbij je de verschillende statistieken kan opvragen. 
 
-### Frontend
+## Frontend implementatie
+<br>
 
 <Image
     light="/img/Light/Statistics.png"

@@ -5,6 +5,9 @@ title: Frontend crash report systeem
 
 # Frontend crash report systeem
 
+## Situering
+<br>
+
 De HS Todo App is sinds 15/02/2023 in test fase gegaan in Westende over een periode van een maand. De gebruikers op deze locatie ervaarden applicatie crashes, maar de nodige informatie omtrent de crashes kwam niet tot bij ons. Om toch informatie te hebben omtrent applicatie crashes is er besloten om een crash report systeem te ontwikkelen. Dit systeem zou ons automatisch verwittigen van applicatie crashes en zo een betere gebruikservaring brengen.
 
 ## Implementatie

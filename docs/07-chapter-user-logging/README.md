@@ -5,9 +5,12 @@ title: User logging
 
 # User logging
 
+## Situering 
+<br>
+
 Soms komt het wel eens voordat er een onverwachte aanpassing is gemaakt op een taak, bijvoorbeeld een deadline van een taak dat veranderd is. Het zou dan handig zijn om te weten wie deze veranderd heeft gemaakt en wanneer deze veranderd is. Om dit allemaal bij te houden moet er een logging systeem ontwikkeld worden die alle relevante data bijhoudt. 
 
-## Implementatie
+## Backend implementatie
 <br>
 
 Om een goeie logging systeem te hebben moet er bij iedere request relevante data opgeslagen worden. Om deze log op te slaan heb ik als eerst een nieuwe entity aangemaakt genaamd `UserLog`.
@@ -33,8 +36,6 @@ Deze entity bevat de volgende informatie:
 
 Met deze informatie is er voldoende om een logging systeem te implementeren. 
 
-### Backend
-
 Om alle acties bij te houden die iedere user uitgevoerd heeft heb ik een logging service gemaakt. Deze service kan dan in iedere contoller waar logging nodig is deze service injecteren en gebruiken.  
 
 <br>
@@ -45,7 +46,8 @@ Wanneer een client dan een request stuurt naar de API, zal deze service een User
 
 Als laatste zal de service alle essentiële data aanvullen vanuit de context waarin het zich bevindt en alle data schrijven naar de database.
 
-### Frontend
+## Frontend implementatie
+<br>
 
 Het implementeren van de backend was in een vroegere periode al gebeurd. Om deze logs dus te bekijken werd er telkens gebruik gemaakt van een SQL-manager waarbij SQL-queries gebruikt werden om deze log te raadplegen. Dit zorgde er ook voor dat deze logs enkel ter beschikking waren voor admins. Daarom is er besloten om een frontend aan te maken die deze logs kan weergeven.  
 

@@ -19,10 +19,7 @@ Op iedere residentie zijn er taken die periodiek ingepland moeten worden, zoals 
 
 Om het manueel inplannen van deze terugkerende taken weg te nemen, is er besloten om een systeem te ontwikkelen die deze automatisch zal inplannen.
 
-## Implementatie
-<br>
-
-### Backend implementatie
+## Backend implementatie
 
 Om taken automatisch periodiek in te plannen, moet er een mogelijkheid zijn om telkens een gegeven periode een taak uit te voeren. Op de huidige backend server applicatie worden er al verschillende synchronisatie periodiek uitvoert. Deze synchronisaties maken gebruik van de [Hangfire]() library. Deze library brengt ontwikkelaars de mogelijkheid om makkelijk achtergrond taken in te plannen en uit te voeren. 
 
@@ -44,7 +41,7 @@ Voor het opslaan van de bundels werd een nieuwe Entity aangemaakt (TodoBundle). 
 
 Op bovenste figuur is een visuele voorstelling te zien van het ontwerp van de backend. Wanneer er een nieuwe bundel binnen komt via een request dan zal de API eerst deze bundel opslaan in de database. Daarna zal hij een achtergrond taak registreren als deze nog niet bestaat voor de huidige bundel. Hangfire zal dan op het gevraagde moment een taak laten uitvoeren. Deze taak zal de bundels uit de database halen, en met deze informatie dan nieuwe taken aanmaken en deze opslaan in de database. 
 
-### Frontend implementatie
+## Frontend implementatie
 
 De frontend moet een gebruiksvriendelijke manier brengen aan de eindgebruiker om verschillende bundels aan te maken. Hiervoor heb ik verder gewerkt op het eerste formulier zie figuur uit [situering](#situering). De volgende zaken heb ik aan het formulier toegevoegd: 
 

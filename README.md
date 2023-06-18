@@ -8,11 +8,11 @@ In opdracht van Holiday Suites heb ik meegeholpen aan de ontwikkeling van de HS 
 
 Voorheen werden deze planningen en opvolging altijd op papier gedaan, evenals het rapporteren van problemen, zoals een lattenbodem dat stuk is in een suite. Dit leidde soms tot het verlies van informatie. De HS Todo App werd ontwikkeld om het papierwerk te vervangen en een gecentraliseerd platform te vormen voor alle residenties.  
 
-De frontend applicatie is geschreven met behulp van het C# Blazor framework, geconfigureerd in server-side render modus. De backend API maakt gebruik van ASP Dotnet Core Web API, met het Dotnet Entity Framework voor de communicatie met de database. 
+De frontend applicatie is geschreven met behulp van het C# Blazor framework, geconfigureerd in server-side render modus. De backend API maakt gebruik van ASP .NET Core Web API, met het .NET Entity Framework voor de communicatie met de database. 
 
 De HS Todo App beschikt nu al over volgende pagina’s: planning pagina voor het inplannen en verdelen van de taken, taken pagina voor het aanmaken van taken en definiëren van terugkerende taken, gebruikers pagina voor het beren van de gebruikers, probleem pagina voor het beheer van gemelde problemen, statistieken pagina voor het inkijken van de schoonmaakscores en de gewerkte tijd per type appartement, en nog veel meer. 
 
-Het resultaat is een applicatie die sinds 15/02/2023 in productie is gesteld die dagelijks wordt gebruikt over alle residentie van Holiday Suites.
+Het resultaat is een applicatie die sinds 23/05/2023 in productie is gesteld over alle residenties die dagelijks wordt gebruikt voor het beheren van de residenties.
 
 ## Mentors
 

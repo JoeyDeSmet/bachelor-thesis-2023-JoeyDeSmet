@@ -5,6 +5,9 @@ title: Herwerking frontend API-calls met JWT
 
 # Herwerking frontend API-calls met JWT
 
+## Situering
+<br>
+
 Na het ontwikkelen van het crash report systeem, kwamen er regelmatig reports binnen in verband met de authenticatie. Deze crash zorgde ervoor dat de gebruikers telkens opnieuw moesten inloggen, dit zorgde dus voor een slechte gebruikservaring. Hierdoor is er besloten om een herwerking uit te voeren van het authenticatiesysteem.
 
 ## Probleem

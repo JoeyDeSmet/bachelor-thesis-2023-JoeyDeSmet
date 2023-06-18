@@ -5,6 +5,9 @@ title: Live reactiviteit met SignalR
 
 # Live reactiviteit met SignalR
 
+## Situering
+<br>
+
 Tot nu hadden alle pagina's enkel maar een statische inhoud. Dit had als gevolg dat er een manuele actie moest uitgevoerd worden om de inhoud van de pagina's te hernieuwen. Wanneer er dus een lastminute taak binnen kwam, kon de poetser dit niet direct zien. Om reactiviteit te brengen aan iedere pagina kan er gebruik gemaakt worden van SignalR, wat intern al door Blazor gebruikt wordt om de DOM te updaten wanneer er een nieuwe pagina word aangevraagd. 
 
 <Image
@@ -28,6 +31,7 @@ SignalR maakt gebruikt van Hubs als abstractie laag tussen de client en de serve
 SignalR heeft de mogelijkheid om verschillende connecties samen te brengen, door gebruik te maken van Hub Groups. Een Hub Group is een collectie van signalen gebonden aan een naam. Door gebruik te maken van Hubs Groups kan nu voor iedere connectie in eenzelfde Hub Group eenzelfde functie aangeroepen worden.
 
 ## Implementatie
+<br>
 
 Om reactiviteit te brengen aan de Todo App zijn verschillende Hub Groups aangemaakt voor iedere residentie. Voor iedere residentie is dan een groep gemaakt dat de taak gerelateerde updates zal doorsturen, en een waar alle probleem gerelateerde update wordt doorgestuurd.
 
