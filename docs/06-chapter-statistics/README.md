@@ -17,7 +17,7 @@ Tijdens het gebruik van de HS Todo App worden er gegevens opgeslagen in verband 
 
 <br>
 
-- Start en Stop datum en tijd 
+- Start- en stopdatum en -tijd 
 - Persoon die de taak heeft gedaan 
 - Indicatie of er een probleem aan deze taak verbonden is 
 - Indicatie of de taak opnieuw geopend is 
@@ -25,7 +25,7 @@ Tijdens het gebruik van de HS Todo App worden er gegevens opgeslagen in verband 
 
 <br>
 
-Omdat de externe score van een klant komt kan het soms zijn dat deze niet echt correct is. Daarom is er nog een indicatie toegevoegd die zegt of een taak zal meetellen bij de statistieken of niet. De externe score wordt ook niet via de Todo App gegeven maar komt uit het boeking programma Booking Experts. Voor deze review data op te halen werd er een synchronisatie taak aangemaakt, die periodiek de reviews zal ophalen. 
+Omdat de externe score van een klant komt kan het soms zijn dat deze niet echt correct is. Daarom is er nog een indicatie toegevoegd die zegt of een taak zal meetellen bij de statistieken of niet. De externe score wordt ook niet via de Todo App gegeven maar komt uit het reservatiesysteem Booking Experts. Voor deze review data op te halen werd er een synchronisatie taak aangemaakt, die periodiek de reviews zal ophalen. 
 
 <br>
 
