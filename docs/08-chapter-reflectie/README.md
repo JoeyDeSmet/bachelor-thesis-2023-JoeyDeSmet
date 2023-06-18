@@ -5,10 +5,13 @@ title: Reflectie
 
 # Reflectie
 
-De HS Todo App is tijdens mijn stage/bachelorproef periode bij Holiday Suites in productie gebracht over de verschillende residenties. Waarbij er eerst een test fase van een maand in Westende ingebracht op 15/02/2023. Daarna werd geleidelijk aan de app gelanceerd over de andere residenties: 
+De HS Todo App is tijdens mijn stage/bachelorproef periode bij Holiday Suites in productie gebracht over de verschillende residenties. 
+
+De Todo App is eerst in een testfase gegaan in Westende over een periode van een maand, dat gestart is op 15/02/2023. Daarna is de Todo App geleidelijk aan gelanceerd op de andere residenties.
 
 <br>
 
+- Westende: Eerste testfase 15
 - Blankenberge & De Haan: 13/03/2023 
 - Zeebrugge: 15/03/2023 
 - Jabbeke: 27/03/2023 
@@ -25,7 +28,7 @@ Voor mijn stage/bachelorproef periode bij Holiday Suites had ik nog nooit een we
 
 <br>
 
-Het Blazor Framework was ook nieuw voor mij, hiermee was ik wel rap mee op weg omdat ik al met andere web frameworks had gewerkt. Het enige waar ik aan gewent moest geraken was dat dit in server side modus stond. In server side zijn er meer zaken mogelijk maar brengt moeilijkheden wanneer je met de browser wilt interageren.  
+Het Blazor Framework was ook nieuw voor mij, hiermee was ik wel rap mee op weg omdat ik al met andere web frameworks had gewerkt. Het enige waar ik moest aan wennen was dat dit in server side modus stond. In server side zijn er meer zaken mogelijk maar dit brengt moeilijkheden wanneer je met de browser wilt interageren.  
 
 <br>
 
@@ -51,7 +54,7 @@ Volgende punten zie ik voor mijzelf als successen die ik in mijn stage/bachelorp
 - Het uitwerken van herbruikbare webcomponenten die op meerder plaatsen kan hergebruikt kan worden op een generieke wijze. 
 - Algemene optimalisaties zoals: 
     - Virtualisatie van het scrollen door een tabel op de webpagina zodat niet alles moet weergegeven worden maar dynamisch ingeladen wordt. 
-    - Caching van taken wanneer deze worden opgevraagd zodat de volgende keer deze sneller ter beschikking zijn 
-    - Compressie van foto’s om zowel plaats in de database te besparen als de laadtijd op de webpagina te verkleinen 
+    - Caching van taken wanneer deze worden opgevraagd zodat de volgende keer deze sneller ter beschikking zijn.
+    - Compressie van foto’s om zowel plaats in de database te besparen als de laadtijd op de webpagina te verkleinen. 
 
 
