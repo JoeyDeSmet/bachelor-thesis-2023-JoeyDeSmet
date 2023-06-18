@@ -1,6 +1,6 @@
 ---
 home: true
-heroText: Ontwikkeling van een plannings- en opvolgingsapllicatie voor logistieke taken
+heroText: Ontwikkeling van een plannings- en opvolgingsapplicatie voor logistieke taken
 heroImage: /vives-logo.png
 tagline: door Joey De Smet
 actions:
