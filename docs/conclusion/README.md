@@ -15,7 +15,7 @@ De HS Todo App zou ook enkele voordelen moeten brengen aan Holiday Suites:
 
 **Voordelen voor Operations**
 
-Het grootste voordeel voor Operations is vooral dat ze geen papier meer hoven te gebruiken. De volgende puntjes zijn zeker ook belangrijk: 
+Het grootste voordeel voor Operations is vooral dat ze geen papier meer hoeven te gebruiken. De volgende puntjes zijn zeker ook belangrijk: 
 
 <br>
 
@@ -24,7 +24,7 @@ Het grootste voordeel voor Operations is vooral dat ze geen papier meer hoven te
     - Dringende taken kunnen bovenaan de lijst geplaatst worden, zonder dat ze de poetser fysiek moeten zoeken in het gebouw om hen deze info te geven 
 
 - Bijsturen vanop afstand 
-    - Omdat de planning inkijkbaar is geworden kan OPS de mensen ter plaatse beter aansturen vanop afstand 
+    - Omdat de planning inkijkbaar is geworden kan operations de mensen ter plaatse beter aansturen vanop afstand 
 
 - Werken met live data 
     - Poetsers hoeven niet meer terug te keren naar het poetslokaal om een volgende lijst van taken te bekomen 
@@ -37,7 +37,7 @@ Het grootste voordeel voor Operations is vooral dat ze geen papier meer hoven te
 
 **Voordelen voor HR** 
 
-Door middel van het inkloksysteem kan de HR-dienst een dubbele controle doen op de gewerkte tijde, en op de aanwezigheid van het poetspersoneel. 
+Door middel van het inkloksysteem kan de HR-dienst een dubbele controle doen op de gewerkte tijden en op de aanwezigheid van het poetspersoneel. 
 
 <br>
 
@@ -47,7 +47,7 @@ Voorheen werd er steeds een ruwe schatting gemaakt van de duurtijd van een schoo
 
 <br>
 
-Dit brengt als voordeel voor HR en Operations dat op basis van deze data een concrete planning kunnen opmaken, waar vroeger bijvoorbeeld vijf poetsers werden ingepland terwijl uit deze data andere conclusies kunnen trekken, en mogelijks meer of minder poetsers zullen nodig zijn.  
+Dit brengt als voordeel voor HR en Operations dat er basis van deze data een concrete planning kan worden opgemaakt waar vroeger bijvoorbeeld vijf poetsers werden ingepland terwijl uit deze data andere conclusies kunnen trekken, en mogelijks meer of minder poetsers zullen nodig zijn.  
 
 <br>
 
