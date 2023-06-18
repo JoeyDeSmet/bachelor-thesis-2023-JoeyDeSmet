@@ -7,7 +7,7 @@ import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 
 export default defineUserConfig({
   lang: 'en-US',
-  title: 'Ontwikkeling van een plannings- en opvolgingsapllicatie voor logistieke taken',
+  title: 'Ontwikkeling van een plannings- en opvolgingsapplicatie voor logistieke taken',
   description: 'Onwikkeling van de HS Todo App',
   head: [
     ['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }]
