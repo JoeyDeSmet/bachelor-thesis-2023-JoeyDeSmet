@@ -74,7 +74,7 @@ Bovenstaande figuren zijn de huidige mobile weergave van deze pagina. Deze pagin
 - Een datum waarmee logs van een specifieke dag kan opgehaald worden 
 - Een type waarmee gefilterd kan worden op 
     - Aanmaak van taak, probleem, etc. 
-    - In en uitlog van een account  
+    - In- en uitlog van een account  
     - Aanpassingen van taak, probleem, etc. 
 - Door wie het uitgevoerd is geweest 
 
