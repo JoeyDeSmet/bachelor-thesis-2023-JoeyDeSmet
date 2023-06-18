@@ -24,7 +24,7 @@ SignalR is een open-source library die ontwikkelaars in staat stelt om op een ee
 
 ### Hubs
 
-SignalR maakt gebruikt van Hubs als abstractie laag tussen de client en de server. Een Hub biedt een gestroomlijnde manier om client side functies aan te roepen vanuit de server en vice versa.
+SignalR maakt gebruik van Hubs als abstractie laag tussen de client en de server. Een Hub biedt een gestroomlijnde manier om client side functies aan te roepen vanuit de server en vice versa.
 
 #### Groepen
 
