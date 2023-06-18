@@ -38,7 +38,7 @@ Deze `.razor`-bestand fungeert al de bouwstenen van een Blazor-applicatie, waari
 } 
 ```
 
-Bovenstaande code is een voorbeeld van `.razor`-bestand, deze code houdt bij hoe vaak een gebruiker de knop heeft geklikt. Wanneer een gebruiker deze knop klikt, wordt er een event gegenereerd die de interne variable zal verhogen. Vervolgens wordt de wijziging aan de gebruiker getoond.
+Bovenstaande code is een voorbeeld van `.razor`-bestand, deze code houdt bij hoe vaak een gebruiker op de knop heeft geklikt. Wanneer een gebruiker op deze knop klikt, wordt er een event gegenereerd die de interne variable zal verhogen. Vervolgens wordt de wijziging aan de gebruiker getoond.
 
 Het bovenste gedeelte van de code bevat de vormgeving van de component, geschreven in HTML. Hierin bevinden zich een paar zaken dat Blazor specifiek zijn en niet behoren tot HTML:
 
@@ -97,7 +97,7 @@ De pagina-rendering wordt uitgevoerd door de server die vervolgens de resulteren
 
 |                     |     Blazor Server                |     Blazor WASM                 |
 |---------------------|----------------------------------|---------------------------------|
-|     Download grote  |   Klein                          |   Groot                         |
+|     downloadgrotte  |   Klein                          |   Groot                         |
 |     Schaalbaarheid  |   Uitdagend                      |   Makkelijk                     |
 |     Serverless      |   Niet mogelijk                  |   Mogelijk                      |
 |     Offlinemode     |   Niet mogelijk                  |   Mogelijk                      |
@@ -107,21 +107,21 @@ In bovenstaande tabel is er een vergelijking gemaakt tussen Blazor Server en Bla
 
 <br>
 
-**Download grote**
+**downloadgrotte**
 
-In tegenstelling tot Blazor WASM is de download grote van Blazor Server veel kleiner, dit komt omdat bij Blazor WASM alle dependencies en het .NET Runtime mee gebundeld worden in de WASM-bestand. Hierdoor zal de initiële laad tijd bij Blazor Server veel lager liggen dan bij Blazor WASM. 
+In tegenstelling tot Blazor WASM is de downloadgrotte van Blazor Server veel kleiner, dit komt omdat bij Blazor WASM alle dependencies en het .NET Runtime mee gebundeld worden in de WASM-bestand. Hierdoor zal de initiële laadtijd bij Blazor Server veel lager liggen dan bij Blazor WASM. 
 
 <br>
 
 **Schallbaarheid en serverless**
 
-Blazor WASM is dan wel veel schaalbaarder dan Blazor Server, dit komt omdat Blazor Server voor iedere connectie RAM-geheugen gebruikt wat een limitatie kan geven tot het aantal gebruikers. Omdat Blazor WASM enkel maar bestand hoeft door te sturen, is er de mogelijkheid om deze in een serverless omgeving te plaatsen.
+Blazor WASM is dan wel veel schaalbaarder dan Blazor Server, dit komt omdat Blazor Server voor iedere connectie RAM-geheugen gebruikt wat een limitatie kan geven tot het aantal gebruikers. Omdat Blazor WASM enkel maar bestanden hoeft door te sturen, is er de mogelijkheid om deze in een serverless omgeving te plaatsen.
 
 <br>
 
 **Offline mode**
 
-Bij het verliezen van de internet connectie zal Blazor Server niet meer reageren omdat deze afhankelijk is van de SignalR connectie met de server. Blazor WASM zal blijven werken tot op het punt dat een API-call gemaakt moet worden.
+Bij het verliezen van de internetconnectie zal Blazor Server niet meer reageren omdat deze afhankelijk is van de SignalR connectie met de server. Blazor WASM zal blijven werken tot op het punt dat een API-call gemaakt moet worden.
 
 <br>
 
@@ -174,7 +174,7 @@ Door het gebruik te maken van deze controller zijn we in staat om makkelijk endp
 ## .NET Entity Framework
 <br>
 
-Het .NET Entity Framework is een open source ORM (Object-Relational Mapper) dat de interactie tussen de applicatie en de database beheert en vereenvoudigd, waardoor het gemakkelijk wordt om gegeven op te slaan en op te halen vanuit de database. 
+Het .NET Entity Framework is een open source ORM (Object-Relational Mapper) dat de interactie tussen de applicatie en de database beheert en vereenvoudigd, waardoor het gemakkelijk wordt om gegevens op te slaan en op te halen vanuit de database. 
 
 ### Werking
 
