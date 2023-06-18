@@ -21,7 +21,7 @@ Om het manueel inplannen van deze terugkerende taken weg te nemen, is er beslote
 
 ## Backend implementatie
 
-Om taken automatisch periodiek in te plannen, moet er een mogelijkheid zijn om telkens een gegeven periode een taak uit te voeren. Op de huidige backend server applicatie worden er al verschillende synchronisatie periodiek uitvoert. Deze synchronisaties maken gebruik van de [Hangfire]() library. Deze library brengt ontwikkelaars de mogelijkheid om makkelijk achtergrond taken in te plannen en uit te voeren. 
+Om taken automatisch en periodiek in te plannen, moet er een mogelijkheid zijn om telkens een gegeven periode een taak uit te voeren. Op de huidige backend server applicatie worden er al verschillende synchronisaties periodiek uitvoert. Deze synchronisaties maken gebruik van de [Hangfire](https://www.hangfire.io/) library. Deze library brengt ontwikkelaars de mogelijkheid om makkelijk achtergrond taken in te plannen en uit te voeren. 
 
 <br>
 
@@ -30,7 +30,7 @@ Voor het opslaan van de bundels werd een nieuwe Entity aangemaakt (TodoBundle). 
 <br>
 
 - Identificatienummer dat aantoont tot welke bundel de TodoBundle behoort 
-- Vereenvoudigde bundel naam die de eindgebruiker zal gebruiken 
+- Vereenvoudigde bundelnaam die de eindgebruiker zal gebruiken 
 - Vervaldatum een datum wanneer de backend deze bundel mag verwijderen 
 - Periode van terugkeer (CRON-string) 
 
@@ -47,13 +47,13 @@ De frontend moet een gebruiksvriendelijke manier brengen aan de eindgebruiker om
 
 <br>
 
-- Bundel naam & nieuwe bundel naam 
+- bundelnaam & nieuwe bundelnaam 
 - Vervaldatum voor de bundel 
-- Manier om een terugkeer periode te beschrijven 
+- Manier om een terugkeerperiode te beschrijven 
 
 <br>
 
-Voor de bundel naam of nieuwe bundel, zijn er twee velden toegevoegd. Een is een selectie waar je een van de huidige bestaande bundels kan selecteren, met daarnaast een knop om een nieuw bundel aan te maken. 
+Voor de bundelnaam of nieuwe bundel, zijn er twee velden toegevoegd. Een is een selectie waar je een van de huidige bestaande bundels kan selecteren, met daarnaast een knop om een nieuw bundel aan te maken. 
 
 <br>
 
