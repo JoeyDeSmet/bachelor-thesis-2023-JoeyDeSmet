@@ -13,7 +13,7 @@ Soms komt het wel eens voordat er een onverwachte aanpassing is gemaakt op een t
 ## Backend implementatie
 <br>
 
-Om een goeie logging systeem te hebben moet er bij iedere request relevante data opgeslagen worden. Om deze log op te slaan heb ik als eerst een nieuwe entity aangemaakt genaamd `UserLog`.
+Om een goede logging systeem te hebben moet er bij iedere request relevante data opgeslagen worden. Om deze log op te slaan heb ik als eerst een nieuwe entity aangemaakt genaamd `UserLog`.
 
 <br>
 
